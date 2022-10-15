@@ -18,6 +18,198 @@
         <a class="link-buttons" href="../loops/loops.html">Loops</a>
         <a class="link-buttons" href="../objects/objects.html">Objects</a>
     </div>
+
+    <div class="section-title">
+        <p >Math & Number Methods</p>
+    </div>
+        <div class="sample-section">
+            <div class="sample-section-colRight">
+                let num1 = 12.3456;
+            </div>
+            <div class="sample-section-colLeft">
+                let num2 = 98.7654
+            </div>            
+        </div>
+        <div class="sample-section-Mid">
+            <div class="sample-section-colMid">
+                let num3 = [23.4567, 87.6543, 45.5445, 102.963852];
+            </div> 
+        </div> 
+            <div class="method">   
+                <div class="method-section">
+                    
+                    <div class="method-subsection">
+                        <div class="method-column">
+                            <br/>
+                            <br/>
+                            <div class="container-code-box">
+                               <div class="syntax-title">
+                                    <p>Number( )</p>
+                                </div>
+                                <div class="code-box">
+                                    <p><i>"452" --> 452 </i><br/>
+                                        returns a number string as a number
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="container-code-box">
+                                <div class="syntax-title">
+                                     <p>Number.parseFloat( )</p>
+                                 </div>
+                                 <div class="code-box">
+                                     <p><i>Number.parseFloat("25.78 sheep") --> 25.78</i><br/>
+                                         returns a string with a number <b><u>in front</u></b> as the number only. <br/>
+                                         If not returns NaN.
+                                     </p>
+                                 </div>
+                             </div>
+                             <div class="container-code-box">
+                                <div class="syntax-title">
+                                     <p>Number.parseInt( )</p>
+                                 </div>
+                                 <div class="code-box">
+                                     <p><i>Number.parseInt("25.78 sheep") --> 25</i><br/>
+                                        returns a string with a number <b><u>in front</u></b> as the number only, without any decimals. <br/>
+                                        If not returns NaN.
+                                     </p>
+                                 </div>
+                             </div>
+                             <div class="container-code-box">
+                                <div class="syntax-title">
+                                     <p>toString( )</p>
+                                 </div>
+                                 <div class="code-box">
+                                     <p><i>num1.toString() --> 12.345</i><br/>
+                                         returns a number as a string.
+                                     </p>
+                                 </div>
+                             </div>
+                             <div class="container-code-box">
+                                <div class="syntax-title">
+                                     <p>Math.ceil( )</p>
+                                 </div>
+                                 <div class="code-box">
+                                     <p><i>Math.ceil(num1) --> 13</i><br/>
+                                         returns a number that has been rounded up to the largest integer.
+                                     </p>
+                                 </div>
+                             </div>
+                             <div class="container-code-box">
+                                <div class="syntax-title">
+                                     <p>Math.floor( )</p>
+                                 </div>
+                                 <div class="code-box">
+                                     <p><i>Math.floor(num1) --> 12</i><br/>
+                                        returns a number that has been rounded down to the smallest integer.
+                                     </p>
+                                 </div>
+                             </div>
+                             <div class="container-code-box">
+                                <div class="syntax-title">
+                                     <p>Math.max( )</p>
+                                 </div>
+                                 <div class="code-box">
+                                     <p><i>Math.max (num3[0], num3[1], num3[2], num3[3])--> 102.963852<br/>
+                                        <br/>
+                                    <u><b>Using spread Operator: </b></u><br/>
+                                    Math.max(...num3) --> 102.963852</i><br/>
+                                    <br/>
+                                    returns the maximum value among specified values.
+                                     </p>
+                                 </div>
+                             </div>
+                              
+                             
+
+
+                        </div>
+                        <div class="method-column">
+                            <br/>
+                            <br/>                                
+                            <div class="container-code-box">
+                               <div class="syntax-title">
+                                    <p>Math.pow( )</p>
+                                </div>
+                                <div class="code-box">
+                                    <p><i>Math.pow(2, 3) --> 8</i><br/>
+                                        returns the value of a base (2), raised to a power(3).
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="container-code-box">
+                                <div class="syntax-title">
+                                     <p>Math.sign( )</p>
+                                 </div>
+                                 <div class="code-box">
+                                     <p><i>Math.sign(num1) --> 1</i><br/>
+                                         returns 1 or 0 if the specified value is a positive number.<br/>
+                                         returns -1 or -0 if the specified value is a negative number.
+                                     </p>
+                                 </div>
+                             </div>
+                             <div class="container-code-box">
+                                <div class="syntax-title">
+                                     <p>Math.random( )</p>
+                                 </div>
+                                 <div class="code-box">
+                                     <p><i>Math.random() --> a random number between 0 & 1.<br/> (changes on every refresh)</i><br/><br/>
+                                        <b><u>To get a random number between two specific numbers:</u></b><br/>
+                                        <i>function getRandomNum(min, max) {<br/>
+                                            return Math.random() * (max - min) + min;<br/>
+                                          }<br/>
+                                           getRandomNum(1, 10) --> output between 1 inclusive and 10 exclusive (including decimal points).</i><br/>
+                                           <br/>
+                                           <b><u>To get a random integer between two specific numbers:</u></b><br/>
+                                        <i>function getRandomNum(min, max) {<br/>
+                                            min = Math.ceil(min);<br/>
+                                            max = Math.floor(max);<br/>
+                                            return Math.floor(Math.random() * (max - min)) + min;<br/>
+                                          }<br/>
+                                           getRandomNum(1, 10) --> output between 1 inclusive and 10 exclusive.</i><br/>
+                                           <br/>
+                                           returns a random number.
+                                     </p>
+                                 </div>
+                             </div>
+                             <div class="container-code-box">
+                                <div class="syntax-title">
+                                     <p>Math.round( )</p>
+                                 </div>
+                                 <div class="code-box">
+                                     <p><i>Math.round(num1) --> 12</i><br/>
+                                         returns a number rounded to the nearest integer.
+                                     </p>
+                                 </div>
+                             </div>
+                             <div class="container-code-box">
+                                <div class="syntax-title">
+                                     <p>Math.trunc( )</p>
+                                 </div>
+                                 <div class="code-box">
+                                     <p><i>Math.trunc(num1) --> 12<br/>
+                                    Math.trunc(num2) --> 98</i><br/>
+                                         returns the integer by removing any fractional digits.
+                                     </p>
+                                 </div>
+                             </div>
+                             <div class="container-code-box">
+                                <div class="syntax-title">
+                                     <p>Math.min( )</p>
+                                 </div>
+                                 <div class="code-box">
+                                     <p><i>Math.min (num3[0], num3[1], num3[2], num3[3])--> 23.4567<br/>
+                                        <br/>
+                                    <u><b>Using spread Operator: </b></u><br/>
+                                    Math.min(...num3) --> 23.4567</i><br/>
+                                    <br/>
+                                    returns the minimum value among specified values.
+                                     </p>
+                                 </div>
+                             </div>
+                             
+                    </div>
+                </div>
+            </div>
     <script src="../mathNumberMethods/mathNumberMethods.js"></script>
 </body>
 </html>
