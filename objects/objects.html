@@ -20,116 +20,223 @@
         
     </div>
 
-    <div>
-        <p class="section-title">Objects</p>
+    <div class="page-title">
+        Objects
             <div>
-            <p class="section-subtitle">Object Creation</p>
+            <p class="section-subtitle">Object Creation
             <div class="section-block">
                 <div class="container-colLeft">
                 <div class="container-title">
-                    <p>Object with <i>new</i> constructor</p>
+                    Object with <i>new</i> constructor
+                </div><div class="method-column-description">
+                    Sub-Subtitle Description
                 </div>
                         <div class="container-syntax">
-                            <div class="syntax-title"><p>Syntax</p>
+                            <div class="syntax-title">Syntax
                             </div>
                                 <div class="syntax-code">
-                                    <p>let obj = new Object();
-                                    </p>
+                                    let obj = new Object();
+                                    
                                 </div>
                         </div>
                         <div class="container-example">
                             <div class="example-title">
-                                <p>Example</p>
+                                Example
                             </div>
                                 <div class="example-code">
-                                    <p>let student = new Object();</p>
+                                    let student = new Object();
                                         
                                 </div>                
                             </div> 
                             <div class="container-console-colLMR">
                                 <div class="console-title">
-                                    <p>Console Result</p>
+                                    Console Result
                                 </div>
                                 <div class="console-code">
-                                <p><i>{}</i></p>
+                                <i>{}</i>
                                 </div>
                             </div>
                 </div>             
                 <div class="container-colMid">
                     <div class="container-title">
-                        <p>Object with <i>new </i>Constructor using function</p>
+                        Object with <i>new </i>Constructor using function
+                    </div>
+                    <div class="method-column-description">
+                        Sub-Subtitle Description
                     </div>
                             <div class="container-syntax">
-                                <div class="syntax-title"><p>Syntax</p>
+                                <div class="syntax-title">Syntax
                                 </div>
                                     <div class="syntax-code">
-                                        <p>function ObjectName(parameter(s)){<br/>
+                                        function ObjectName(parameter(s)){<br/>
                                         this.parameter = keyName;<br/>
                                     };<br/>
                                 <br/>
-                            let newObj = new ObjectName(parameter(s);</p>
+                            let newObj = new ObjectName(parameter(s);
                                     </div>
                             </div>
                             <div class="container-example">
                                 <div class="example-title">
-                                    <p>Example</p>
+                                    Example
                                 </div>
                                     <div class="example-code">
-                                        <p>function Student(name, age){<br/>
-                                            this.name = name<br/>
-                                            this.age = age;<br/>
+                                        function Student(name, age){<br/>
+                                            &nbsp&nbspthis.name = name<br/>
+                                            &nbsp&nbspthis.age = age;<br/>
                                         }<br/>
                                         <br/>
-                                        let student1 = new Student("Sheila", 17);<br/>
-                                        console.log(student1);</p><br/>
-                                            <br/>
+                                        let student1 = <br/>
+                                        new Student("Sheila", 17);<br/>
+                                        <br/>
+                                        console.log(student1);
                                     </div>                
                                 </div> 
                                 <div class="container-console-colLMR">
                                     <div class="console-title">
-                                        <p>Console Result</p>
+                                        Console Result
                                     </div>
                                     <div class="console-code">
-                                        <p>true</p>
+                                        <i>Student {name: 'Sheila', age: 17}</i>
                                     </div>
                                 </div>                   
                 </div>
                 <div class="container-colRight">
                     <div class="container-title">
-                        <p>Arrow Function</p>
+                        Using <i>Object.create</i> method
+                    </div><div class="method-column-description">
+                        Sub-Subtitle Description
                     </div>
                             <div class="container-syntax">
-                                <div class="syntax-title"><p>Syntax</p>
+                                <div class="syntax-title">Syntax
                                 </div>
                                     <div class="syntax-code">
-                                        <p>let functionName (parameter(s)) => <br/>
-                                            statement/ return;<br/>                  
-                                            <br/>
-                                            functionName(argument(s));</p>
+                                        let templateObject = {<br/>
+                                                &nbsp&nbspkeyName : valueExample,<br/>
+                                                &nbsp&nbspkeyName : valueExample<br/>
+                                            };<br/>
+                                        <br/>
+                                        let objectName = Object.create(templateObject);<br/>
+                                    objectName.keyName = value;
                                     </div>
                             </div>
                             <div class="container-example">
                                 <div class="example-title">
-                                    <p>Example</p>
+                                    Example
                                 </div>
                                     <div class="example-code">
-                                        <p>let add (num1, num2) => <br/>
-                                            num1 + num2;<br/>
-                                            <br/>
-                                            console.log(add(1, 2));</p>
+                                        let Vegetable = {<br/>
+                                            &nbsp&nbspname: "",<br/>
+                                            &nbsp&nbspcolor: "",<br/>
+                                            &nbsp&nbspprice: 0.00<br/>
+                                        };<br/>
+                                        <br/>
+                                        let Vegetable2 = Object.create(Vegetable);<br/>
+                                        Vegetable2.name = "pumpkin";<br/>
+                                        Vegetable2.color = "orange";<br/>
+                                        Vegetable2.price = 3.43;<br/>
+                                        <br/>
+                                        console.log(Vegetable2);
                                             <br/>
                                     </div>                
                                 </div>   
                                 <div class="container-console-colLMR">
                                     <div class="console-title">
-                                        <p>Console Result</p>
+                                        Console Result
                                     </div>
                                     <div class="console-code">
-                                        <p>true</p>
+                                        <i>{name: 'pumpkin', color: 'orange', price: 3.43}</i><br/>
+                                            color: "orange"<br/>
+                                            name: "pumpkin"<br/>
+                                            price: 3.43
                                     </div>
                                 </div>                 
                 </div>
             </div>
+            </div>
+            <div class="method">
+                <!-- <div class="section-subtitle">
+                    Subtitle
+                </div> -->
+                            
+                <div class="method-section">
+                    <!-- <div class="container-title">
+                        Sub-Subtitle
+                    </div>
+                    <div class="container-description">
+                        Section Description
+                    </div> -->
+                    <div class="method-subsection">
+                        <div class="method-column">
+                            <div class="syntax-title">
+                                <i>Left Column Title</i>
+                            </div>
+                            <div class="method-column-description">
+                                Sub-Subtitle Description
+                            </div>
+                            <div class="container-syntax-method">
+                               <div class="syntax-title">
+                                    Syntax
+                                </div>
+                                <div class="syntax-code">
+                                    Syntax Example<br/>
+                                       Syntax Example
+                                </div>
+                            </div>
+                            <div class="container-example-method">
+                                <div class="example-title">
+                                    Example
+                                </div>
+                                <div class="example-code">
+                                    Example<br/>
+                                    Example
+                                </div>
+                            </div>
+                            <div class="container-console-method">
+                                <div class="console-title">
+                                    Console Result
+                                </div>
+                                <div class="console-code">
+                                    Console Result<br/>
+                                        Console Result
+                                </div>
+                            </div>
+                        </div>
+                        <div class="method-column">
+                            <div class="syntax-title">
+                                <i>Right Column Title </i>
+                            </div>
+                            <div class="container-syntax-method">
+                                <div class="syntax-title">
+                                    Syntax
+                                </div>
+                                <div class="syntax-code">
+                                    Syntax Example<br/>
+                                        Syntax Example
+                                </div>
+                            </div>
+                            <div class="container-example-method">
+                                <div class="example-title">
+                                    Example
+                                </div>
+                                <div class="example-code">
+                                    Example<br/>
+                                    Example
+                                </div>
+                            </div>
+                            <div class="container-console-method">
+                                <div class="console-title">
+                                    Console Result
+                                </div>
+                                <div class="console-code">
+                                    Console Result<br/>
+                                    Console Result
+                                </div>
+                            </div>
+                        </div>
+                    
+                    
+                    </div>
+                </div>
             </div>
     <script src="../objects/objects.js"></script>
 </body>
