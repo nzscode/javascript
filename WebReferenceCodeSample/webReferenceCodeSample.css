@@ -1,0 +1,24 @@
+.tab{
+    margin-left: 40px;
+}
+
+.container-html-css-code{
+    justify-content:left;
+    /* background-color: orange; */
+    /*margin: 1rem 0.5rem; */
+    border: 2px dashed hotpink;
+    margin: 1rem;
+    padding: 1.5rem;
+}
+
+.html-css-wrapper{
+    border: 4px solid blue;
+    margin: 1rem;
+    padding: 1.5rem;
+}
+
+.sectional-components-wrapper{
+    border: 6px solid orange;
+    margin: 1rem;
+    padding: 1.5rem;
+}
