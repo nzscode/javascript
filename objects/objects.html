@@ -19,6 +19,118 @@
         <a class="link-buttons" href="../loops/loops.html">Loops</a>
         
     </div>
+
+    <div>
+        <p class="section-title">Objects</p>
+            <div>
+            <p class="section-subtitle">Object Creation</p>
+            <div class="section-block">
+                <div class="container-colLeft">
+                <div class="container-title">
+                    <p>Object with <i>new</i> constructor</p>
+                </div>
+                        <div class="container-syntax">
+                            <div class="syntax-title"><p>Syntax</p>
+                            </div>
+                                <div class="syntax-code">
+                                    <p>let obj = new Object();
+                                    </p>
+                                </div>
+                        </div>
+                        <div class="container-example">
+                            <div class="example-title">
+                                <p>Example</p>
+                            </div>
+                                <div class="example-code">
+                                    <p>let student = new Object();</p>
+                                        
+                                </div>                
+                            </div> 
+                            <div class="container-console-colLMR">
+                                <div class="console-title">
+                                    <p>Console Result</p>
+                                </div>
+                                <div class="console-code">
+                                <p><i>{}</i></p>
+                                </div>
+                            </div>
+                </div>             
+                <div class="container-colMid">
+                    <div class="container-title">
+                        <p>Object with <i>new </i>Constructor using function</p>
+                    </div>
+                            <div class="container-syntax">
+                                <div class="syntax-title"><p>Syntax</p>
+                                </div>
+                                    <div class="syntax-code">
+                                        <p>function ObjectName(parameter(s)){<br/>
+                                        this.parameter = keyName;<br/>
+                                    };<br/>
+                                <br/>
+                            let newObj = new ObjectName(parameter(s);</p>
+                                    </div>
+                            </div>
+                            <div class="container-example">
+                                <div class="example-title">
+                                    <p>Example</p>
+                                </div>
+                                    <div class="example-code">
+                                        <p>function Student(name, age){<br/>
+                                            this.name = name<br/>
+                                            this.age = age;<br/>
+                                        }<br/>
+                                        <br/>
+                                        let student1 = new Student("Sheila", 17);<br/>
+                                        console.log(student1);</p><br/>
+                                            <br/>
+                                    </div>                
+                                </div> 
+                                <div class="container-console-colLMR">
+                                    <div class="console-title">
+                                        <p>Console Result</p>
+                                    </div>
+                                    <div class="console-code">
+                                        <p>true</p>
+                                    </div>
+                                </div>                   
+                </div>
+                <div class="container-colRight">
+                    <div class="container-title">
+                        <p>Arrow Function</p>
+                    </div>
+                            <div class="container-syntax">
+                                <div class="syntax-title"><p>Syntax</p>
+                                </div>
+                                    <div class="syntax-code">
+                                        <p>let functionName (parameter(s)) => <br/>
+                                            statement/ return;<br/>                  
+                                            <br/>
+                                            functionName(argument(s));</p>
+                                    </div>
+                            </div>
+                            <div class="container-example">
+                                <div class="example-title">
+                                    <p>Example</p>
+                                </div>
+                                    <div class="example-code">
+                                        <p>let add (num1, num2) => <br/>
+                                            num1 + num2;<br/>
+                                            <br/>
+                                            console.log(add(1, 2));</p>
+                                            <br/>
+                                    </div>                
+                                </div>   
+                                <div class="container-console-colLMR">
+                                    <div class="console-title">
+                                        <p>Console Result</p>
+                                    </div>
+                                    <div class="console-code">
+                                        <p>true</p>
+                                    </div>
+                                </div>                 
+                </div>
+            </div>
+            </div>
     <script src="../objects/objects.js"></script>
 </body>
 </html>
