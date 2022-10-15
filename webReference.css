@@ -98,7 +98,7 @@ body{
 }
 
 .inner-code{
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         font-size: 14px;
         /*margin-bottom: -0.5rem; */
 }
@@ -136,8 +136,3 @@ body{
     height: 20px;
     width: 20px;
 }
-
-
-
-
-
