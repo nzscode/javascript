@@ -19,5 +19,303 @@
         <a class="link-buttons" href="../objects/objects.html">Objects</a>
     </div>
     <script src="../loops/loops.js"></script>
+
+    <div>
+        <p class="section-title">Loops</p>
+            <div>
+            <p class="section-subtitle">Loop Types:</p>
+            <div class="section-block">
+                <div class="container-colLeft">
+                <div class="container-title">
+                    <p>For</p>
+                </div>
+                        <div class="container-syntax">
+                            <div class="syntax-title"><p>Syntax</p>
+                            </div>
+                                <div class="syntax-code">
+                                    <p>for (initialize; condition; update) { <br/>
+                                        statement/ return;<br/> 
+                                        };</p>
+                                </div>
+                        </div>
+                        <div class="container-example">
+                            <div class="example-title">
+                                <p>Example</p>
+                            </div>
+                                <div class="example-code">
+                                    <p>for (i = 0; i < 5; i++) { <br/>
+                                        console.log(i);<br/> 
+                                        };                                   
+                                     </p>
+                                </div>                
+                        </div> 
+                        <div class="container-console-example">
+                            <div class="console-title">
+                                <p>Console Result</p>
+                            </div>
+                            <div class="console-code">
+                                <p>0<br/>
+                                1<br/>
+                                2<br/>
+                                3<br/>
+                                4<br/>
+                                5</p>
+                            </div>
+                        </div>
+                </div>             
+                <div class="container-colMid">
+                    <div class="container-title">
+                        <p>while</p>
+                    </div>
+                            <div class="container-syntax">
+                                <div class="syntax-title"><p>Syntax</p>
+                                </div>
+                                    <div class="syntax-code">
+                                        <p>initialize;<br/>
+                                            while ( condition) { <br/>
+                                            statement/ return;<br/> 
+                                            update;<br/>                   
+                                            };</p>
+                                    </div>
+                            </div>
+                            <div class="container-example">
+                                <div class="example-title">
+                                    <p>Example</p>
+                                </div>
+                                    <div class="example-code">
+                                        <p>let i = 0;<br/>
+                                            while (i < 5) { <br/>
+                                            console.log(i);<br/> 
+                                            i++;<br/>                   
+                                            };</p>
+                                    </div>                
+                            </div>
+                            <div class="container-console-example">
+                                <div class="console-title">
+                                    <p>Console Result</p>
+                                </div>
+                                <div class="console-code">
+                                    <p>0<br/>
+                                    1<br/>
+                                    2<br/>
+                                    3<br/>
+                                    4<br/>
+                                    5</p>
+                                </div>
+                            </div>                    
+                </div>
+                <div class="container-colRight">
+                    <div class="container-title">
+                        <p>Do ... while</p>
+                    </div>
+                    <div class="container-column-description">
+                        <p>Executes at least once.</p>
+                    </div>
+                            <div class="container-syntax">
+                                <div class="syntax-title"><p>Syntax</p>
+                                </div>
+                                    <div class="syntax-code">
+                                        <p>initialize;<br/>
+                                            do { <br/>
+                                            statement/ return;<br/> 
+                                            update;<br/>                   
+                                            }<br/>
+                                            while (condition);</p>
+                                    </div>
+                            </div>
+                            <div class="container-example">
+                                <div class="example-title">
+                                    <p>Example</p>
+                                </div>
+                                    <div class="example-code">
+                                        <p>let i = 0;;<br/>
+                                            do { <br/>
+                                            console.log(i);<br/> 
+                                            i++;<br/>                   
+                                            }<br/>
+                                            while (i < 5);</p>
+                                    </div>                
+                                
+                            </div>
+                            <div class="container-console-example">
+                                <div class="console-title">
+                                    <p>Console Result</p>
+                                </div>
+                                <div class="console-code">
+                                    <p>0<br/>
+                                    1<br/>
+                                    2<br/>
+                                    3<br/>
+                                    4<br/>
+                                    5</p>
+                                </div>
+                            </div>                    
+                </div>
+            </div>
+            </div>
+    
+    
+            <div class="method">
+                <div class="section-subtitle">
+                    <p>Array Loops</p>
+                </div>
+                            
+                <div class="method-section">
+                    <div class="container-title">
+                        <br/>
+                    </div>
+                    <div class="container-description">
+                        <p>Iterating through objects or arrays.</p>
+                    </div>
+                    <div class="method-subsection">
+                        <div class="method-column">
+                            <div class="syntax-title">
+                                <p>To iterate through the keys of an object:</p>
+                            </div>
+                            <div class="method-column-description">
+                                <p>For strings and arrays For...of is better.</p>
+                            </div>
+                            <div class="container-syntax-method">
+                               <div class="syntax-title">
+                                    <p>Syntax</p>
+                                </div>
+                                <div class="syntax-code">
+                                    <p>for (let key in object){<br/>
+                                        statement/return;<br/>
+                                    }</p>
+                                </div>
+                            </div>
+                            <div class="container-example-method">
+                                <div class="example-title">
+                                    <p>example</p>
+                                </div>
+                                <div class="example-code">
+                                    <p>let student1 = {<br/>
+                                        name: "Henry",<br/>
+                                        age: 5<br/>
+                                        };<br/>
+                                        
+                                        <br/>
+                                        for (let key in student1){<br/>
+                                            console.log(key);<br/>
+                                        };</p>
+                                </div>
+                            </div>
+                            <div class="container-console-method">
+                                <div class="console-title">
+                                    <p>Console Result</p>
+                                </div>
+                                <div class="console-code">
+                                    <p>name<br/>
+                                    age</p>
+                                </div>
+                            </div>
+                            <br/>
+                            <br/>
+                            <div class="syntax-title">
+                                <p>To iterate through the values of an object:</p>
+                            </div>
+                            <div class="method-column-description">
+                                <p>For strings and arrays For...of is better.</p>
+                            </div>
+                            <div class="container-syntax-method">
+                               <div class="syntax-title">
+                                    <p>Syntax</p>
+                                </div>
+                                <div class="syntax-code">
+                                    <p>for (let key in object){<br/>
+                                        statement/return;<br/>
+                                    }</p>
+                                </div>
+                            </div>
+                            <div class="container-example-method">
+                                <div class="example-title">
+                                    <p>example</p>
+                                </div>
+                                <div class="example-code">
+                                    <p>let student1 = {<br/>
+                                        name: "Henry",<br/>
+                                        age: 5<br/>
+                                        };<br/>
+                                        
+                                        <br/>
+                                        for (let key in student1){<br/>
+                                            console.log(student[key]);<br/>
+                                        };</p>
+                                </div>
+                            </div>
+                            <div class="container-console-method">
+                                <div class="console-title">
+                                    <p>Console Result</p>
+                                </div>
+                                <div class="console-code">
+                                    <p>Henry<br/>
+                                    5</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="method-column">
+                            <div class="syntax-title">
+                                <p>To iterate through the values:</p>
+                            </div>
+                            <div class="method-column-description">
+                                <p>Best for arrays, strings, generators, maps, sets<br/>
+                                     and user defined iterators.<br/>
+                                    <b><u>NOT</u></b> for objects</p>
+                            </div>
+                            <div class="container-syntax-method">
+                                <div class="syntax-title">
+                                    <p>Syntax</p>
+                                </div>
+                                <div class="syntax-code">
+                                    <p>for (let value of array){<br/>
+                                    statement/return;<br/>
+                                };</p>
+                                </div>
+                            </div>
+                            <div class="container-example-method">
+                                <div class="example-title">
+                                    <p>example</p>
+                                </div>
+                                <div class="example-code">
+                                    <p>let arr = [1, 4, 2, 9];<br/>
+                                    for (let value of arr){<br/>
+                                    console.log(value);<br/>
+                                    }</p>
+                                    <p>let str = "Rose M.";<br/>
+                                        for (let value of str){<br/>
+                                        console.log(value);<br/>
+                                        }</p>
+                                </div>
+                            </div>
+                            <div class="container-console-method">
+                                <div class="console-title">
+                                    <p>Console Result</p>
+                                </div>
+                                <div class="console-code">
+                                    <p>1<br/>
+                                    4<br/>
+                                    2<br/>
+                                    9<br/>
+                                    R<br/>
+                                    o<br/>
+                                    s<br/>
+                                    e<br/>
+                                    <br/>
+                                    M<br/>
+                                    .</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+                    
+            
+        
 </body>
 </html>
