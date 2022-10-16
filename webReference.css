@@ -40,7 +40,7 @@ body{
     border: solid 1.5px black;
     border-radius: 7px;
     text-align: justify;
-    /*margin: 0 0.5rem; */
+    margin: 0 0.5rem;
 }
 
 .column-thirds{
@@ -59,6 +59,7 @@ body{
     /* background-color: green; */
     /* border: solid 1.5px black; */
     border-radius: 7px;
+    margin: 0 0.5rem;
 }
 
 .column-full{
@@ -92,7 +93,7 @@ body{
     border: solid 2px rgb(41, 173, 105);
 }
 
-.snippet-color{
+.SEC-color{
     background-color:rgba(255, 105, 180, 0.048);
     border: solid 2px rgba(255, 105, 180, 0.178);
 }
@@ -119,6 +120,10 @@ body{
     text-align: left;
 }
 
+.center-align{
+    text-align: center;
+}
+
 .wrapper-subtitle-description{
     background-color: white;
     border: solid 1.5px black;
@@ -135,4 +140,8 @@ body{
     border-radius: 50%;
     height: 20px;
     width: 20px;
+}
+
+.no-copy{
+    user-select: none;
 }
