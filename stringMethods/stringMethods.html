@@ -22,259 +22,225 @@
         <a class="link-buttons" href="../loops/loops.html">Loops</a>
         <a class="link-buttons" href="../objects/objects.html">Objects</a>
     </div>
-    <div class="section-title">
-    <p >String Methods</p>
-    </div>
-    <div class="sample-section">
-        <div class="sample-section-colRight">
+<!-- Title -->  
+<br/>
+<br/>
+    <div class="page-title">String Methods</div>
+<!-- Samples -->
+    <div class="section-wrapper">
+        <div class="container-sample column-halves">
             let str1 = "The boy who lived";
         </div>
-        <div class="sample-section-colLeft">
+        <div class="container-sample column-halves">
             let str2 = "Now come to die!";
-        </div>            
+        </div>          
     </div>
-     
-        <div class="method">   
-            <div class="method-section">
-                
-                <div class="method-subsection">
-                    <div class="method-column">
-                        
-                        <div class="container-code-box">
-                           <div class="syntax-title">
-                                <p>charAt( )</p>
-                            </div>
-                            <div class="code-box">
-                                <p><i>str1.charAt(6) --> y</i><br/>
-                                    returns character at index 6.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="container-code-box">
-                            <div class="syntax-title">
-                                 <p>concat( )</p>
-                             </div>
-                             <div class="code-box">
-                                 <p><i>str1.concat(str2) --> The boy who livedNow come to die!</i><br/>
-                                     returns str1 appended to str2.
-                                 </p>
-                             </div>
-                         </div>
-                         <div class="container-code-box">
-                            <div class="syntax-title">
-                                 <p>length( )</p>
-                             </div>
-                             <div class="code-box">
-                                 <p><i>str1.length(6) --> 17</i><br/>
-                                     returns number of indexes.
-                                 </p>
-                             </div>
-                         </div>
-                         <div class="container-code-box">
-                            <div class="syntax-title">
-                                 <p>indexOf( )</p>
-                             </div>
-                             <div class="code-box">
-                                 <p><i>str1.indexOf("b") --> 4</i><br/>
-                                     returns index of "b".
-                                 </p>
-                             </div>
-                         </div>
-                         <div class="container-code-box">
-                            <div class="syntax-title">
-                                 <p>lastIndexOf( )</p>
-                             </div>
-                             <div class="code-box">
-                                 <p><i>str1.lastIndexOf("e") --> 15</i><br/>
-                                     returns last index of "e".
-                                 </p>
-                             </div>
-                         </div>
-                         <div class="container-code-box">
-                            <div class="syntax-title">
-                                 <p>match( )</p>
-                             </div>
-                             <div class="code-box">
-                                 <p><i>str1.match("who") --> <br/>
-                                    ['who, index: 8, input: 'The boy who lived', groups: undefined]</i><br/>
-                                     normally matches against RegExp(regexp).
-                                 </p>
-                             </div>
-                         </div>
-                         <div class="container-code-box">
-                            <div class="syntax-title">
-                                 <p>replace( )</p>
-                             </div>
-                             <div class="code-box">
-                                 <p><i>str1.replace("boy", "girl") --> The girl who lived</i><br/>
-                                     returns string where "boy" is replaced with "girl".
-                                 </p>
-                             </div>
-                         </div>
-                         <div class="container-code-box">
-                            <div class="syntax-title">
-                                 <p>search( )</p>
-                             </div>
-                             <div class="code-box">
-                                 <p><i>str1.search("lived") --> 12</i><br/>
-                                    normally matches against RegExp(regexp).
-                                 </p>
-                             </div>
-                         </div>
-                         <div class="container-code-box">
-                            <div class="syntax-title">
-                                 <p>repeat( )</p>
-                             </div>
-                             <div class="code-box">
-                                 <p><i>str1.repeat(2) --> The boy who livedThe boy who lived</i><br/>
-                                     returns the string repeated by the number specified.
-                                 </p>
-                             </div>
-                         </div>
-                         <div class="container-code-box">
-                            <div class="syntax-title">
-                                 <p>trimEnd( )</p>
-                             </div>
-                             <div class="code-box">
-                                 <p><i>str1.trimEnd()</i><br/>
-                                     returns string with extra whitespace removed from end.
-                                 </p>
-                             </div>
-                         </div>
-                         <div class="container-code-box">
-                            <div class="syntax-title">
-                                 <p>trimRight( )</p>
-                             </div>
-                             <div class="code-box">
-                                 <p><i>str1.trimRight()</i><br/>
-                                     returns string with extra whitespace removed from right of string.
-                                 </p>
-                             </div>
-                         </div>
-                         
-
-                    </div>
-                    <div class="method-column">
-                        
-                        <div class="container-code-box">
-                           <div class="syntax-title">
-                                <p>slice( )</p>
-                            </div>
-                            <div class="code-box">
-                                <p><i>str1.slice(4, 10) --> boy who</i><br/>
-                                    returns string from index 4 upto but excluding index 10.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="container-code-box">
-                            <div class="syntax-title">
-                                 <p>split( )</p>
-                             </div>
-                             <div class="code-box">
-                                 <p><i>str1.split(" ") --> ['The', 'boy', 'who', 'lived']</i><br/>
-                                     returns an array using " "(space) as a delimiter.
-                                 </p>
-                             </div>
-                         </div>
-                         <div class="container-code-box">
-                            <div class="syntax-title">
-                                 <p>substring( )</p>
-                             </div>
-                             <div class="code-box">
-                                 <p><i>str1.substring(5, 9) --> oy w</i><br/>
-                                     returns string from index 5 upto but excluding index 9.
-                                 </p>
-                             </div>
-                         </div>
-                         <div class="container-code-box">
-                            <div class="syntax-title">
-                                 <p>toLowerCase( )</p>
-                             </div>
-                             <div class="code-box">
-                                 <p><i>str1.toLowerCase(str1) --> the boy who lived</i><br/>
-                                     returns complete string in lower case.
-                                 </p>
-                             </div>
-                         </div>
-                         <div class="container-code-box">
-                            <div class="syntax-title">
-                                 <p>toUpperCase( )</p>
-                             </div>
-                             <div class="code-box">
-                                 <p><i>str1.toUpperCase(str1) --> THE BOY WHO LIVED</i><br/>
-                                     returns complete string in upper case.
-                                 </p>
-                             </div>
-                         </div>
-                         <div class="container-code-box">
-                            <div class="syntax-title">
-                                 <p>includes( )</p>
-                             </div>
-                             <div class="code-box">
-                                 <p><i>str1.includes("who") --> true</i><br/>
-                                     returns boolean if keyword is included inside string.
-                                 </p>
-                             </div>
-                         </div>
-                         <div class="container-code-box">
-                            <div class="syntax-title">
-                                 <p>padEnd( )</p>
-                             </div>
-                             <div class="code-box">
-                                 <p><i>str1.padEnd(252, "!") --> The boy who lived!!!!!!!!</i><br/>
-                                     returns string with "!" at end until total string length of 25 is reached.
-                                 </p>
-                             </div>
-                         </div>
-                         <div class="container-code-box">
-                            <div class="syntax-title">
-                                 <p>padStart( )</p>
-                             </div>
-                             <div class="code-box">
-                                 <p><i>str1.padStart(25, "!) --> !!!!!!!!The boy who lived</i><br/>
-                                    returns string with "!" at the start until total string length of 25 is reached.
-                                 </p>
-                             </div>
-                         </div>
-                         <div class="container-code-box">
-                            <div class="syntax-title">
-                                 <p>startsWith( )</p>
-                             </div>
-                             <div class="code-box">
-                                 <p><i>str1.startsWith(The) --> true</i><br/>
-                                     returns boolean if string starts with string.
-                                 </p>
-                             </div>
-                         </div>
-                         <div class="container-code-box">
-                            <div class="syntax-title">
-                                 <p>endsWith( )</p>
-                             </div>
-                             <div class="code-box">
-                                 <p><i>str1.endsWith("ed") --> true</i><br/>
-                                     returns boolean if string ends with string.
-                                 </p>
-                             </div>
-                         </div>
-                         <div class="container-code-box">
-                            <div class="syntax-title">
-                                 <p>trim( )</p>
-                             </div>
-                             <div class="code-box">
-                                 <p><i>str1.trim() --> </i><br/>
-                                     returns string with extra whitespace removed from right and end of string.
-                                 </p>
-                             </div>
-                         </div>
-                         
-                    </div>
+<!----------- Columns with Code -->
+    <div class="section-wrapper">   
+        <div class="container-column column-halves">                        
+            <div class="container-syntax-example-console SEC-color">
+                <div class="title-syntax-example-console">
+                    charAt( )
+                </div>
+                <div class="inner-code">
+                    <i>str1.charAt(6) --> y</i><br/>
+                        returns character at index 6.                                
                 </div>
             </div>
+            <div class="container-syntax-example-console SEC-color">
+                <div class="title-syntax-example-console">
+                    concat( )
+                </div>
+                <div class="inner-code">
+                    <i>str1.concat(str2) --> The boy who livedNow come to die!</i><br/>
+                        returns str1 appended to str2.                        
+                </div>
+            </div>
+            <div class="container-syntax-example-console SEC-color">
+                <div class="title-syntax-example-console">
+                    length( )
+                </div>
+                <div class="inner-code">
+                    <i>str1.length(6) --> 17</i><br/>
+                        returns number of indexes.                    
+                </div>
+            </div>
+            <div class="container-syntax-example-console SEC-color">
+                <div class="title-syntax-example-console">
+                    indexOf( )
+                </div>
+                <div class="inner-code">
+                    <i>str1.indexOf("b") --> 4</i><br/>
+                        returns index of "b".                    
+                </div>
+            </div>
+            <div class="container-syntax-example-console SEC-color">
+                <div class="title-syntax-example-console">
+                    lastIndexOf( )
+                </div>
+                <div class="inner-code">
+                    <i>str1.lastIndexOf("e") --> 15</i><br/>
+                        returns last index of "e".                    
+                </div>
+            </div>
+            <div class="container-syntax-example-console SEC-color">
+                <div class="title-syntax-example-console">
+                    match( )
+                </div>
+                <div class="inner-code">
+                    <i>str1.match("who") --> <br/>
+                    ['who, index: 8, input: 'The boy who lived', groups: undefined]</i><br/>
+                        normally matches against RegExp(regexp).                    
+                </div>
+            </div>
+            <div class="container-syntax-example-console SEC-color">
+                <div class="title-syntax-example-console">
+                    replace( )
+                </div>
+                <div class="inner-code">
+                    <i>str1.replace("boy", "girl") --> The girl who lived</i><br/>
+                        returns string where "boy" is replaced with "girl".                    
+                </div>
+            </div>
+            <div class="container-syntax-example-console SEC-color">
+                <div class="title-syntax-example-console">
+                    search( )
+                </div>
+                <div class="inner-code">
+                    <i>str1.search("lived") --> 12</i><br/>
+                    normally matches against RegExp(regexp).                    
+                </div>
+            </div>
+            <div class="container-syntax-example-console SEC-color">
+                <div class="title-syntax-example-console">
+                    repeat( )
+                </div>
+                <div class="inner-code">
+                    <i>str1.repeat(2) --> The boy who livedThe boy who lived</i><br/>
+                        returns the string repeated by the number specified.                    
+                </div>
+            </div>
+            <div class="container-syntax-example-console SEC-color">
+                <div class="title-syntax-example-console">
+                    trimEnd( )
+                </div>
+                <div class="inner-code">
+                    <i>str1.trimEnd()</i><br/>
+                        returns string with extra whitespace removed from end.                    
+                </div>
+            </div>
+            <div class="container-syntax-example-console SEC-color">
+                <div class="title-syntax-example-console">
+                    trimRight( )
+                </div>
+                <div class="inner-code">
+                    <i>str1.trimRight()</i><br/>
+                        returns string with extra whitespace removed from right of string.                    
+                </div>
+            </div>           
         </div>
-        
-                
-        
-    
+        <div class="container-column column-halves">                        
+            <div class="container-syntax-example-console SEC-color">
+                <div class="title-syntax-example-console">
+                    slice( )
+                </div>
+                <div class="inner-code">
+                    <i>str1.slice(4, 10) --> boy who</i><br/>
+                        returns string from index 4 upto but excluding index 10.                    
+                </div>
+            </div>
+            <div class="container-syntax-example-console SEC-color">
+                <div class="title-syntax-example-console">
+                    split( )
+                </div>
+                <div class="inner-code">
+                    <i>str1.split(" ") --> ['The', 'boy', 'who', 'lived']</i><br/>
+                        returns an array using " "(space) as a delimiter.                    
+                </div>
+            </div>
+            <div class="container-syntax-example-console SEC-color">
+                <div class="title-syntax-example-console">
+                    substring( )
+                </div>
+                <div class="inner-code">
+                    <i>str1.substring(5, 9) --> oy w</i><br/>
+                        returns string from index 5 upto but excluding index 9.                    
+                </div>
+            </div>
+            <div class="container-syntax-example-console SEC-color">
+                <div class="title-syntax-example-console">
+                    toLowerCase( )
+                </div>
+                <div class="inner-code">
+                    <i>str1.toLowerCase(str1) --> the boy who lived</i><br/>
+                        returns complete string in lower case.                    
+                </div>
+            </div>
+            <div class="container-syntax-example-console SEC-color">
+                <div class="title-syntax-example-console">
+                    toUpperCase( )
+                </div>
+                <div class="inner-code">
+                    <i>str1.toUpperCase(str1) --> THE BOY WHO LIVED</i><br/>
+                        returns complete string in upper case.                    
+                </div>
+            </div>
+            <div class="container-syntax-example-console SEC-color">
+                <div class="title-syntax-example-console">
+                    includes( )
+                </div>
+                <div class="inner-code">
+                    <i>str1.includes("who") --> true</i><br/>
+                        returns boolean if keyword is included inside string.                    
+                </div>
+            </div>
+            <div class="container-syntax-example-console SEC-color">
+                <div class="title-syntax-example-console">
+                    padEnd( )
+                </div>
+                <div class="inner-code">
+                    <i>str1.padEnd(252, "!") --> The boy who lived!!!!!!!!</i><br/>
+                        returns string with "!" at end until total string length of 25 is reached.                    
+                </div>
+            </div>
+            <div class="container-syntax-example-console SEC-color">
+                <div class="title-syntax-example-console">
+                    padStart( )
+                </div>
+                <div class="inner-code">
+                    <i>str1.padStart(25, "!) --> !!!!!!!!The boy who lived</i><br/>
+                    returns string with "!" at the start until total string length of 25 is reached.                    
+                </div>
+            </div>
+            <div class="container-syntax-example-console SEC-color">
+                <div class="title-syntax-example-console">
+                    startsWith( )
+                </div>
+                <div class="inner-code">
+                    <i>str1.startsWith(The) --> true</i><br/>
+                        returns boolean if string starts with string.                    
+                </div>
+            </div>
+            <div class="container-syntax-example-console SEC-color">
+                <div class="title-syntax-example-console">
+                    endsWith( )
+                </div>
+                <div class="inner-code">
+                    <i>str1.endsWith("ed") --> true</i><br/>
+                        returns boolean if string ends with string.                    
+                </div>
+            </div>
+            <div class="container-syntax-example-console SEC-color">
+                <div class="title-syntax-example-console">
+                    trim( )
+                </div>
+                <div class="inner-code">
+                    <i>str1.trim() --> </i><br/>
+                        returns string with extra whitespace removed from right and end of string.                    
+                </div>
+            </div>                         
+        </div>
+    </div>
     <script src="../stringMethods/stringMethods.js"></script>
 </body>
 </html>
