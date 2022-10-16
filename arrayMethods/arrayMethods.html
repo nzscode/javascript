@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="navigation-panel">
-        <a class="link-buttons"    href="../landingPage/landingPage.html">Home</a>
+        <a class="link-buttons" href="../landingPage/landingPage.html">Home</a>
         <a class="link-buttons" href="../functions/functions.html">Functions</a>
         <a class="link-buttons" href="../stringMethods/stringMethods.html">String Methods</a>
         <a class="link-buttons" href="../if/if.html">If</a>
@@ -17,208 +17,186 @@
         <a class="link-buttons" href="../mathNumberMethods/mathNumberMethods.html">Math & Number Methods</a>
         <a class="link-buttons" href="../loops/loops.html">Loops</a>
         <a class="link-buttons" href="../objects/objects.html">Objects</a>
+    </div>  
+<!-- Title -->  
+<br/>
+<br/>
+    <div class="page-title">Array Methods</div>
+<!-- Samples -->
+    <div class="section-wrapper">
+        <div class="container-sample column-halves">
+            let arr1 = [31, 74, 11, 8, 25, 11];
+        </div>
+        <div class="container-sample column-halves">
+            let arr2 = ['p', 'a', 'g', 'u', 'a'];
+        </div>          
     </div>
-    <script src="../arrayMethods/arrayMethods.js"></script>
-
-    <div class="section-title">
-        Array Methods
-        </div>
-        <div class="sample-section">
-            <div class="sample-section-colRight">
-                let arr1 = [31, 74, 11, 8, 25, 11];
-            </div>
-            <div class="sample-section-colLeft">
-                let arr2 = ['p', 'a', 'g', 'u', 'a'];
-            </div>            
-        </div>
-            <div class="method">   
-                <div class="method-section">
-                    
-                    <div class="method-subsection">
-                        <div class="method-column">
-                            <div class="container-code-box">
-                               <div class="syntax-title">
-                                    <p>concat( )</p>
-                                </div>
-                                <div class="code-box">
-                                    <p><i>arr1.concat() --><br/> [31, 74, 11, 8, 25, 11, 'p', 'a', 'g', 'u', 'a'] </i><br/>
-                                        returns arr1 concatenated to arr2.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="container-code-box">
-                                <div class="syntax-title">
-                                     <p>join( )</p>
-                                 </div>
-                                 <div class="code-box">
-                                     <p><i>arr1.join("!") --> 31!74!11!8!25!11</i><br/>
-                                         returns string by using delimiter between elements of the array.
-                                     </p>
-                                 </div>
-                             </div>
-                             <div class="container-code-box">
-                                <div class="syntax-title">
-                                     <p>length( )</p>
-                                 </div>
-                                 <div class="code-box">
-                                     <p><i>arr1.length() --> 5</i><br/>
-                                         returns number of indexes in the array.
-                                     </p>
-                                 </div>
-                             </div>
-                             <div class="container-code-box">
-                                <div class="syntax-title">
-                                     <p>getindexOf( )</p>
-                                 </div>
-                                 <div class="code-box">
-                                     <p><i>arr2.getindexOf("g") --> 2</i><br/>
-                                         returns the index of "g".
-                                     </p>
-                                 </div>
-                             </div>
-                             <div class="container-code-box">
-                                <div class="syntax-title">
-                                     <p>lastIndexOf( )</p>
-                                 </div>
-                                 <div class="code-box">
-                                     <p><i>arr1.lastIndexOf("a") --> 4</i><br/>
-                                         returns the last index of "a".
-                                     </p>
-                                 </div>
-                             </div>
-                             <div class="container-code-box">
-                                <div class="syntax-title">
-                                     <p>sort( )</p>
-                                 </div>
-                                 <div class="code-box">
-                                     <p><i>arr1.sort() --> [11, 11, 25, 31, 74, 8] ~ (<u><b>1</u></b>1 < <u><b>8</b></u>)</i><br/>
-                                        <i>arr2.sort() --> ['a', 'a', 'g', 'p', 'u']</i><br/>
-                                         returns array sorted alphabetically.<br/>
-                                         <br/>
-                                         To sort numerically using function expression: <br/> 
-                                         arr1.sort(function (a, b) {<br/>
-                                            return a - b;<br/>
-                                          });<br/>
-                                        --> [8, 11, 11, 25, 31, 74]<br/>
-                                        <br/>
-                                          To sort numerically using arrow function: <br/>
-                                          arr1.sort((a, b) => b - a);<br/>
-                                    -->  [8, 11, 11, 25, 31, 74]
-                                     </p>
-                                 </div>
-                             </div>
-                             <div class="container-code-box">
-                                <div class="syntax-title">
-                                     <p>slice( )</p>
-                                 </div>
-                                 <div class="code-box">
-                                     <p><i>arr2.slice(0, 2) --> ['p', 'a']</i><br/>
-                                         returns sliced portion of the array including the first index and upto excluding the second index.
-                                     </p>
-                                 </div>
-                             </div>
-                                                
-                        </div>
-                        <div class="method-column">
-                            <div class="container-code-box">
-                               <div class="syntax-title">
-                                    <p>pop( )</p>
-                                </div>
-                                <div class="code-box">
-                                    <p><i>arr1.pop() --> [31, 74, 11, 8, 25]</i><br/>
-                                        returns the string with the last element removed.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="container-code-box">
-                                <div class="syntax-title">
-                                     <p>push( )</p>
-                                 </div>
-                                 <div class="code-box">
-                                     <p><i>arr1.push(5) --> [31, 74, 11, 8, 25, 11, 5]</i><br/>
-                                         returns array with new element appended to end of array.
-                                     </p>
-                                 </div>
-                             </div>
-                             <div class="container-code-box">
-                                <div class="syntax-title">
-                                     <p>shift( )</p>
-                                 </div>
-                                 <div class="code-box">
-                                     <p><i>arr1.shift() --> [74, 11, 8, 25, 11]</i><br/>
-                                         returns array after removing first element.
-                                     </p>
-                                 </div>
-                             </div>
-                             <div class="container-code-box">
-                                <div class="syntax-title">
-                                     <p>unshift( )</p>
-                                 </div>
-                                 <div class="code-box">
-                                     <p><i>arr1.unshift(5) --> [5, 31, 74, 11, 8, 25, 11]</i><br/>
-                                         returns array with new element appended to right of array.
-                                     </p>
-                                 </div>
-                             </div>
-                             <div class="container-code-box">
-                                <div class="syntax-title">
-                                     <p>toString( )</p>
-                                 </div>
-                                 <div class="code-box">
-                                     <p><i>arr1.toString() --> 31,74,11,8,25,11</i><br/>
-                                         returns string after converting array to string.
-                                     </p>
-                                 </div>
-                             </div>
-                             <div class="container-code-box">
-                                <div class="syntax-title">
-                                     <p>reverse( )</p>
-                                 </div>
-                                 <div class="code-box">
-                                     <p><i>arr1.reverse() --> [11, 25, 8, 11, 74, 31] <br/>
-                                        arr2.reverse() --> ['a', 'u', 'g', 'a', 'p']
-                                    </i><br/>
-                                         returns array in reverse.
-                                     </p>
-                                 </div>
-                             </div>
-                             <div class="container-code-box">
-                                <div class="syntax-title">
-                                     <p>splice( )</p>
-                                 </div>
-                                 <div class="code-box">
-                                     <p><i>arr1.splice(1, 3) --> [74, 11, 8]<br/>
-                                        arr2.splice(1, 3) --> ['a', 'g', 'u']</i><br/>
-                                         returns array including first index, and total number of index positions to remove.
-                                     </p>
-                                 </div>
-                             </div>
-                             <div class="container-code-box">
-                                <div class="syntax-title">
-                                     <p>Array.isArray( )</p>
-                                 </div>
-                                 <div class="code-box">
-                                     <p><i>Array.isArray(arr1) --> true
-                                    </i><br/>
-                                         returns boolean if argument is an array.
-                                     </p>
-                                 </div>
-                             </div>
-                             <div class="container-code-box">
-                                <div class="syntax-title">
-                                     <p>valueOf( )</p>
-                                 </div>
-                                 <div class="code-box">
-                                     <p><i>arr1.valueOf()</i><br/>
-                                        returns primitive value.
-                                     </p>
-                                 </div>
-                             </div>
-                             
-                             
-                        </div>
-                    </div>
+<!-- Columns with Code -->              
+    <div class="section-wrapper">
+        <div class="container-column column-halves">
+            <div class="container-syntax-example-console SEC-color">
+                <div class="title-syntax-example-console">
+                    concat( )
+                </div>
+                <div class="inner-code">
+                    <i>arr1.concat() --><br/> [31, 74, 11, 8, 25, 11, 'p', 'a', 'g', 'u', 'a'] </i><br/>
+                        returns arr1 concatenated to arr2.                    
                 </div>
             </div>
+            <div class="container-syntax-example-console SEC-color">
+                <div class="title-syntax-example-console">
+                    join( )
+                </div>
+                <div class="inner-code">
+                    <i>arr1.join("!") --> 31!74!11!8!25!11</i><br/>
+                        returns string by using delimiter between elements of the array.                        
+                </div>
+            </div>
+            <div class="container-syntax-example-console SEC-color">
+                <div class="title-syntax-example-console">
+                    length( )
+                </div>
+                <div class="inner-code">
+                    <i>arr1.length() --> 5</i><br/>
+                        returns number of indexes in the array.                        
+                </div>
+            </div>
+            <div class="container-syntax-example-console SEC-color">
+                <div class="title-syntax-example-console">
+                    getindexOf( )
+                </div>
+                <div class="inner-code">
+                    <i>arr2.getindexOf("g") --> 2</i><br/>
+                        returns the index of "g".                        
+                </div>
+            </div>
+            <div class="container-syntax-example-console SEC-color">
+                <div class="title-syntax-example-console">
+                    lastIndexOf( )
+                </div>
+                <div class="inner-code">
+                    <i>arr1.lastIndexOf("a") --> 4</i><br/>
+                        returns the last index of "a".                        
+                </div>
+            </div>
+            <div class="container-syntax-example-console SEC-color">
+                <div class="title-syntax-example-console">
+                    sort( )
+                </div>
+                <div class="inner-code">
+                    <i>arr1.sort() --> [11, 11, 25, 31, 74, 8] ~ (<u><b>1</u></b>1 < <u><b>8</b></u>)</i><br/>
+                    <i>arr2.sort() --> ['a', 'a', 'g', 'p', 'u']</i><br/>
+                        returns array sorted alphabetically.<br/>
+                        <br/>
+                        To sort numerically using function expression: <br/>
+                        arr1.sort(function (a, b) {<br/>
+                        return a - b;<br/>
+                        });<br/>
+                    --> [8, 11, 11, 25, 31, 74]<br/>
+                    <br/>
+                        To sort numerically using arrow function: <br/>
+                        arr1.sort((a, b) => b - a);<br/>
+                -->  [8, 11, 11, 25, 31, 74]                        
+                </div>
+            </div>
+                <div class="container-syntax-example-console SEC-color">
+                    <div class="title-syntax-example-console">
+                        slice( )
+                    </div>
+                    <div class="inner-code">
+                        <i>arr2.slice(0, 2) --> ['p', 'a']</i><br/>
+                            returns sliced portion of the array including the first index and upto excluding the second index.                        
+                    </div>
+                </div>        
+        </div>
+        <div class="container-column column-halves">
+            <div class="container-syntax-example-console SEC-color">
+                <div class="title-syntax-example-console">
+                    pop( )
+                </div>
+                <div class="inner-code">
+                    <i>arr1.pop() --> [31, 74, 11, 8, 25]</i><br/>
+                        returns the string with the last element removed.                    
+                </div>
+            </div>
+            <div class="container-syntax-example-console SEC-color">
+                <div class="title-syntax-example-console">
+                        push( )
+                </div>
+                <div class="inner-code">
+                    <i>arr1.push(5) --> [31, 74, 11, 8, 25, 11, 5]</i><br/>
+                        returns array with new element appended to end of array.                        
+                </div>
+            </div>
+            <div class="container-syntax-example-console SEC-color">
+                <div class="title-syntax-example-console">
+                    shift( )
+                </div>
+                <div class="inner-code">
+                    <i>arr1.shift() --> [74, 11, 8, 25, 11]</i><br/>
+                        returns array after removing first element.                        
+                </div>
+            </div>
+            <div class="container-syntax-example-console SEC-color">
+                <div class="title-syntax-example-console">
+                    unshift( )
+                </div>
+                <div class="inner-code">
+                    <i>arr1.unshift(5) --> [5, 31, 74, 11, 8, 25, 11]</i><br/>
+                        returns array with new element appended to right of array.                        
+                </div>
+            </div>
+            <div class="container-syntax-example-console SEC-color">
+                <div class="title-syntax-example-console">
+                    toString( )
+                </div>
+                <div class="inner-code">
+                    <i>arr1.toString() --> 31,74,11,8,25,11</i><br/>
+                        returns string after converting array to string.                        
+                </div>
+            </div>
+            <div class="container-syntax-example-console SEC-color">
+                <div class="title-syntax-example-console">
+                    reverse( )
+                </div>
+                <div class="inner-code">
+                    <i>arr1.reverse() --> [11, 25, 8, 11, 74, 31] <br/>
+                    arr2.reverse() --> ['a', 'u', 'g', 'a', 'p']
+                </i><br/>
+                        returns array in reverse.                        
+                </div>
+            </div>
+            <div class="container-syntax-example-console SEC-color">
+                <div class="title-syntax-example-console">
+                    splice( )
+                </div>
+                <div class="inner-code">
+                    <i>arr1.splice(1, 3) --> [74, 11, 8]<br/>
+                    arr2.splice(1, 3) --> ['a', 'g', 'u']</i><br/>
+                        returns array including first index, and total number of index positions to remove.                        
+                </div>
+            </div>
+            <div class="container-syntax-example-console SEC-color">
+                <div class="title-syntax-example-console">
+                    Array.isArray( )
+                </div>
+                <div class="inner-code">
+                    <i>Array.isArray(arr1) --> true
+                </i><br/>
+                        returns boolean if argument is an array.                        
+                </div>
+            </div>
+            <div class="container-syntax-example-console SEC-color">
+                <div class="title-syntax-example-console">
+                    valueOf( )
+                </div>
+                <div class="inner-code">
+                    <i>arr1.valueOf()</i><br/>
+                    returns primitive value.                        
+                </div>
+            </div>        
+        </div>
+    </div>
+    <script src="../arrayMethods/arrayMethods.js"></script>
 </body>
 </html>
