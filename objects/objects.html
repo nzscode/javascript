@@ -17,227 +17,546 @@
         <a class="link-buttons" href="../mathNumberMethods/mathNumberMethods.html">Math & Number Methods</a>
         <a class="link-buttons" href="../arrayMethods/arrayMethods.html">Array Methods</a>
         <a class="link-buttons" href="../loops/loops.html">Loops</a>
+    </div>
+<br/>
+<br/>
+<!-- ---------------------------------------------- -->
+
+<div class="page-title">Objects</div>
+<div class="section-title">Object Creation:</div>
+<!-- -------------------------------------- -->
+<div class="section-wrapper">
+    <div class="container-column column-thirds">
+        <div class="column-title">
+            Object with <i>new</i> constructor
+        </div>
+        <div class="container-syntax-example-console syntax-color">
+            <div class="title-syntax-example-console">
+                Syntax
+            </div>
+            <div class="inner-code">
+                let obj = new Object();
+            </div>
+        </div>
+        <div class="container-syntax-example-console example-color">
+            <div class="title-syntax-example-console">
+                Example
+            </div>
+            <div class="inner-code">
+                let student = new Object();
+            </div>
+        </div>
+        <div class="container-syntax-example-console console-color">
+            <div class="title-syntax-example-console">
+                Console
+            </div>
+            <div class="inner-code">
+                <i>{ }</i>
+            </div>
+        </div>
+    </div>
+    <div class="container-column column-thirds">
+        <div class="column-title">
+            Object with <i>new</i> constructor using <u>functions</u>
+        </div>
+        <div class="container-syntax-example-console syntax-color">
+            <div class="title-syntax-example-console">
+                Syntax
+            </div>
+            <div class="inner-code">
+                    function ObjectName(parameter(s)){<br/>
+                    this.parameter = keyName;<br/>
+                    };
+                    <br/>
+                    let newObj = <br/>
+                    new ObjectName(parameter(s);
+            </div>
+        </div>
+        <div class="container-syntax-example-console example-color">
+            <div class="title-syntax-example-console">
+                Example
+            </div>
+            <div class="inner-code">
+                        function Student(name, age){<br/>
+                        this.name = name<br/>
+                        this.age = age;<br/>
+                        }<br/>
+                  <br/>
+                        let student1 =<br/>
+                        new Student("Sheila", 17);<br/>
+                  <br/>
+                        console.log(student1);
+            </div>
+        </div>
+        <div class="container-syntax-example-console console-color">
+            <div class="title-syntax-example-console">
+                Console
+            </div>
+            <div class="inner-code">
+                <i>Student {name: 'Sheila', age: 17}</i>
+            </div>
+        </div>
+    </div>
+    <div class="container-column column-thirds">
+        <div class="column-title">
+            Using <i>Object.create</i> method.
+        </div>
+        <div class="container-syntax-example-console syntax-color">
+            <div class="title-syntax-example-console">
+                Syntax
+            </div>
+            <div class="inner-code">
+                        let templateObject = {<br/>
+                            keyName : valueExample,<br/>
+                            keyName : valueExample<br/>
+                          };<br/>
+                          <br/>
+                          let objectName = <br/>
+                          Object.create(templateObject);<br/>
+                          objectName.keyName = value;<br/>
+            </div>
+        </div>
+        <div class="container-syntax-example-console example-color">
+            <div class="title-syntax-example-console">
+                Example
+            </div>
+            <div class="inner-code">
+                        let Vegetable = {<br/>
+                            name: "",<br/>
+                            color: "",<br/>
+                            price: 0.00<br/>
+                          };<br/>
+                          <br/>
+                          let Vegetable2 = <br/>Object.create(Vegetable);<br/>
+                          Vegetable2.name = "pumpkin";<br/>
+                          Vegetable2.color = "orange";<br/>
+                          Vegetable2.price = 3.43;<br/>
+                          <br/>
+                          console.log(Vegetable2);
+            </div>
+        </div>
+        <div class="container-syntax-example-console console-color">
+            <div class="title-syntax-example-console">
+                Console
+            </div>
+            <div class="inner-code">            
+                <i>{name: 'pumpkin', color: 'orange',<br/>
+                    <span class="tab">price: 3.43}</i></span><br/>
+                color: "orange"<br/>
+                name: "pumpkin"<br/>
+                price: 3.43
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -------------------------------------- -->
+<br/>
+<br/>
+<!-- -------------------------------------- -->
+<div class="section-wrapper">
+    <div class="container-column column-halves">
+        <div class="column-title">
+            Assigning Properties to an Object:
+            <div class="column-description">
+                Defining a Property by assigning a value:
+            </div>
+        </div>
+        <div class="container-syntax-example-console syntax-color">
+            <div class="title-syntax-example-console">
+                Syntax
+            </div>
+            <div class="inner-code">
+                myObj.keyName = value;
+            </div>
+        </div>
+        <div class="container-syntax-example-console example-color">
+            <div class="title-syntax-example-console">
+                Example
+            </div>
+            <div class="inner-code">
+                let Cars = new Object();<br/>
+                Cars.color = 'brown';<br/>
+                <br/>
+                console.log(Cars);
+            </div>
+        </div>
+        <div class="container-syntax-example-console console-color">
+            <div class="title-syntax-example-console">
+                Console
+            </div>
+            <div class="inner-code">
+                <i>{color: 'brown'}</i>
+            </div>
+        </div>
+    </div>
+    <div class="container-column column-halves">
+        <div class="column-title">
+            Assigning Properties to an Object:
+            <div class="column-description">
+                Using an object initializer:
+            </div>
+        </div>
+        <div class="container-syntax-example-console syntax-color">
+            <div class="title-syntax-example-console">
+                Syntax
+            </div>
+            <div class="inner-code">
+                let myObj = {<br/>
+                    key1: value1,<br/>
+                    key2: 'value2'<br/>
+                }
+            </div>
+        </div>
+        <div class="container-syntax-example-console example-color">
+            <div class="title-syntax-example-console">
+                Example
+            </div>
+            <div class="inner-code">
+                let Cars = {<br/>
+                    color: "blue",<br/>
+                    year: 2011<br/>
+                };<br/>
+                <br/>
+                console.log(Cars);
+            </div>
+        </div>
+        <div class="container-syntax-example-console console-color">
+            <div class="title-syntax-example-console">
+                Console
+            </div>
+            <div class="inner-code">
+                <i>{color: 'blue'}</i>
+            </div>
+        </div>
+    </div>   
+</div>
+<!-- -------------------------------------- -->
+<br/>
+<br/>
+<!-- -------------------------------------- -->
+<div class="section-wrapper">
+    <div class="container-column column-halves">
+        <div class="column-title">
+            Accessing objects:
+            <div class="column-description">
+                Use bracket notation, only if key is known at runtime.
+            </div>
+        </div>
+        <div class="container-syntax-example-console syntax-color">
+            <div class="inner-code">
+                let myKey1 = myObj['key1'];<br/>
+                OR<br/>
+                let myKey1 = myObj.key1;
+            </div>
+        </div>
+        <div class="container-syntax-example-console example-color">
+            <div class="inner-code">
+                let myCarColor = Cars['color']<br/>
+                OR<br/>
+                let myCarColor = Cars.color;<br/>
+                <br/>
+                console.log(myCarColor);
+            </div>
+        </div>
+        <div class="container-syntax-example-console console-color">
+            <div class="inner-code">
+                <i>{color: 'pink'}</i>
+            </div>
+        </div>
         
     </div>
-
-    <div class="page-title">
-        Objects
-            <div>
-            <p class="section-subtitle">Object Creation
-            <div class="section-block">
-                <div class="container-colLeft">
-                <div class="container-title">
-                    Object with <i>new</i> constructor
-                </div><div class="method-column-description">
-                    Sub-Subtitle Description
-                </div>
-                        <div class="container-syntax">
-                            <div class="syntax-title">Syntax
-                            </div>
-                                <div class="syntax-code">
-                                    let obj = new Object();
-                                    
-                                </div>
-                        </div>
-                        <div class="container-example">
-                            <div class="example-title">
-                                Example
-                            </div>
-                                <div class="example-code">
-                                    let student = new Object();
-                                        
-                                </div>                
-                            </div> 
-                            <div class="container-console-colLMR">
-                                <div class="console-title">
-                                    Console Result
-                                </div>
-                                <div class="console-code">
-                                <i>{}</i>
-                                </div>
-                            </div>
-                </div>             
-                <div class="container-colMid">
-                    <div class="container-title">
-                        Object with <i>new </i>Constructor using function
-                    </div>
-                    <div class="method-column-description">
-                        Sub-Subtitle Description
-                    </div>
-                            <div class="container-syntax">
-                                <div class="syntax-title">Syntax
-                                </div>
-                                    <div class="syntax-code">
-                                        function ObjectName(parameter(s)){<br/>
-                                        this.parameter = keyName;<br/>
-                                    };<br/>
-                                <br/>
-                            let newObj = new ObjectName(parameter(s);
-                                    </div>
-                            </div>
-                            <div class="container-example">
-                                <div class="example-title">
-                                    Example
-                                </div>
-                                    <div class="example-code">
-                                        function Student(name, age){<br/>
-                                            &nbsp&nbspthis.name = name<br/>
-                                            &nbsp&nbspthis.age = age;<br/>
-                                        }<br/>
-                                        <br/>
-                                        let student1 = <br/>
-                                        new Student("Sheila", 17);<br/>
-                                        <br/>
-                                        console.log(student1);
-                                    </div>                
-                                </div> 
-                                <div class="container-console-colLMR">
-                                    <div class="console-title">
-                                        Console Result
-                                    </div>
-                                    <div class="console-code">
-                                        <i>Student {name: 'Sheila', age: 17}</i>
-                                    </div>
-                                </div>                   
-                </div>
-                <div class="container-colRight">
-                    <div class="container-title">
-                        Using <i>Object.create</i> method
-                    </div><div class="method-column-description">
-                        Sub-Subtitle Description
-                    </div>
-                            <div class="container-syntax">
-                                <div class="syntax-title">Syntax
-                                </div>
-                                    <div class="syntax-code">
-                                        let templateObject = {<br/>
-                                                &nbsp&nbspkeyName : valueExample,<br/>
-                                                &nbsp&nbspkeyName : valueExample<br/>
-                                            };<br/>
-                                        <br/>
-                                        let objectName = Object.create(templateObject);<br/>
-                                    objectName.keyName = value;
-                                    </div>
-                            </div>
-                            <div class="container-example">
-                                <div class="example-title">
-                                    Example
-                                </div>
-                                    <div class="example-code">
-                                        let Vegetable = {<br/>
-                                            &nbsp&nbspname: "",<br/>
-                                            &nbsp&nbspcolor: "",<br/>
-                                            &nbsp&nbspprice: 0.00<br/>
-                                        };<br/>
-                                        <br/>
-                                        let Vegetable2 = Object.create(Vegetable);<br/>
-                                        Vegetable2.name = "pumpkin";<br/>
-                                        Vegetable2.color = "orange";<br/>
-                                        Vegetable2.price = 3.43;<br/>
-                                        <br/>
-                                        console.log(Vegetable2);
-                                            <br/>
-                                    </div>                
-                                </div>   
-                                <div class="container-console-colLMR">
-                                    <div class="console-title">
-                                        Console Result
-                                    </div>
-                                    <div class="console-code">
-                                        <i>{name: 'pumpkin', color: 'orange', price: 3.43}</i><br/>
-                                            color: "orange"<br/>
-                                            name: "pumpkin"<br/>
-                                            price: 3.43
-                                    </div>
-                                </div>                 
-                </div>
+    <div class="container-column column-halves">
+        <div class="column-title">
+            Assigning values to objects:
+        </div>
+        <div class="container-syntax-example-console syntax-color">
+            <div class="inner-code">
+                myObj['key1'] = 'Value1';<br/>
+                OR<br/>
+                myObj.key1 = 'value1';
             </div>
+        </div>
+        <div class="container-syntax-example-console example-color">
+            <div class="inner-code">
+                Cars['color'] = 'pink';<br/>
+                OR<br/>
+                Cars.color = 'pink';<br/>
+                <br/>
+                console.log(Cars);
             </div>
-            <div class="method">
-                <!-- <div class="section-subtitle">
-                    Subtitle
-                </div> -->
-                            
-                <div class="method-section">
-                    <!-- <div class="container-title">
-                        Sub-Subtitle
-                    </div>
-                    <div class="container-description">
-                        Section Description
-                    </div> -->
-                    <div class="method-subsection">
-                        <div class="method-column">
-                            <div class="syntax-title">
-                                <i>Left Column Title</i>
-                            </div>
-                            <div class="method-column-description">
-                                Sub-Subtitle Description
-                            </div>
-                            <div class="container-syntax-method">
-                               <div class="syntax-title">
-                                    Syntax
-                                </div>
-                                <div class="syntax-code">
-                                    Syntax Example<br/>
-                                       Syntax Example
-                                </div>
-                            </div>
-                            <div class="container-example-method">
-                                <div class="example-title">
-                                    Example
-                                </div>
-                                <div class="example-code">
-                                    Example<br/>
-                                    Example
-                                </div>
-                            </div>
-                            <div class="container-console-method">
-                                <div class="console-title">
-                                    Console Result
-                                </div>
-                                <div class="console-code">
-                                    Console Result<br/>
-                                        Console Result
-                                </div>
-                            </div>
-                        </div>
-                        <div class="method-column">
-                            <div class="syntax-title">
-                                <i>Right Column Title </i>
-                            </div>
-                            <div class="container-syntax-method">
-                                <div class="syntax-title">
-                                    Syntax
-                                </div>
-                                <div class="syntax-code">
-                                    Syntax Example<br/>
-                                        Syntax Example
-                                </div>
-                            </div>
-                            <div class="container-example-method">
-                                <div class="example-title">
-                                    Example
-                                </div>
-                                <div class="example-code">
-                                    Example<br/>
-                                    Example
-                                </div>
-                            </div>
-                            <div class="container-console-method">
-                                <div class="console-title">
-                                    Console Result
-                                </div>
-                                <div class="console-code">
-                                    Console Result<br/>
-                                    Console Result
-                                </div>
-                            </div>
-                        </div>
-                    
-                    
-                    </div>
-                </div>
+        </div>
+        <div class="container-syntax-example-console console-color">
+            <div class="inner-code">
+                <i>{color: 'pink'}</i>
             </div>
+        </div>
+    </div>
+</div>
+<!-- -------------------------------------- -->
+<br/>
+<br/>
+<!-- -------------------------------------- -->
+<div class="section-wrapper">
+    <div class="container-column column-halves">
+        <div class="column-title">
+            Deleting key:values from objects:
+            </div>
+        <div class="container-syntax-example-console syntax-color">
+            <div class="inner-code">
+                delete myObj.key;<br/>
+                OR<br/>
+                delete myObj['key'];
+            </div>
+        </div>
+        <div class="container-syntax-example-console example-color">
+            <div class="inner-code">
+                delete Cars.color;<br/>
+                OR<br/>
+                delete Cars['key'];<br/>
+                <br/>
+                console.log(Cars);
+            </div>
+        </div>
+        <div class="container-syntax-example-console console-color">
+            <div class="inner-code">
+                <i>{year: 1967}</i>
+            </div>
+        </div>
+    </div>
+    <div class="container-column column-halves">
+    <div class="column-title">
+            Finding the keys inside of objects:
+            </div>
+        <div class="container-syntax-example-console syntax-color">
+            <div class="inner-code">
+                Object.keys(myObj)
+            </div>
+        </div>
+        <div class="container-syntax-example-console example-color">
+            <div class="inner-code">
+                let myKeys = Object.keys(Cars);<br/>
+                <br/>
+                console.log(Cars);
+            </div>
+        </div>
+        <div class="container-syntax-example-console console-color">
+            <div class="inner-code">
+                <i>{'color', 'year', 'city'}</i>
+            </div>
+        </div>
+    </div>  
+</div>  
+<!-- -------------------------------------- -->
+<br/>
+<br/>
+<!-- -------------------------------------- -->
+<div class="section-wrapper">
+    <div class="container-column column-halves">
+        <div class="column-title">
+            Deleting key:values from objects:
+            </div>
+        <div class="container-syntax-example-console syntax-color">
+            <div class="inner-code">
+                delete myObj.key;<br/>
+                OR<br/>
+                delete myObj['key'];
+            </div>
+        </div>
+        <div class="container-syntax-example-console example-color">
+            <div class="inner-code">
+                delete Cars.color;<br/>
+                OR<br/>
+                delete Cars['key'];<br/>
+                <br/>
+                console.log(Cars);
+            </div>
+        </div>
+        <div class="container-syntax-example-console console-color">
+            <div class="inner-code">
+                <i>{year: 1967}</i>
+            </div>
+        </div>
+    </div>
+    <div class="container-column column-halves">
+    <div class="column-title">
+            Finding the keys inside of objects:
+            </div>
+        <div class="container-syntax-example-console syntax-color">
+            <div class="inner-code">
+                let myKeys = Object.keys(myObj);
+            </div>
+        </div>
+        <div class="container-syntax-example-console example-color">
+            <div class="inner-code">
+                let carKeys = Object.keys(Cars);<br/>
+                <br/>
+                console.log(carKeys);
+            </div>
+        </div>
+        <div class="container-syntax-example-console console-color">
+            <div class="inner-code">
+                <i>{'color', 'year', 'city'}</i>
+            </div>
+        </div>
+    </div>  
+</div>  
+<!-- ---------------------------------------------- -->
+<br/>
+<br/>
+<!-- -------------------------------------- -->
+<div class="section-wrapper">
+    <div class="container-column column-halves">
+        <div class="column-title">
+            Finding the values of objects:
+            </div>
+        <div class="container-syntax-example-console syntax-color">
+            <div class="inner-code">
+                let myValues = Object.value(myObj);
+            </div>
+        </div>
+        <div class="container-syntax-example-console example-color">
+            <div class="inner-code">
+                 let carValues = Object.value(Cars);<br/>
+                <br/>
+                console.log(carValues);
+            </div>
+        </div>
+        <div class="container-syntax-example-console console-color">
+            <div class="inner-code">
+                <i>['pink', 1967, 'Toronto']</i>
+            </div>
+        </div>
+    </div>
+    <div class="container-column column-halves">
+    <div class="column-title">
+            Getting the key:value pairs from inside of objects:
+            </div>
+        <div class="container-syntax-example-console syntax-color">
+            <div class="inner-code">
+                let myKeyValues = Object.entries(myObj);
+            </div>
+        </div>
+        <div class="container-syntax-example-console example-color">
+            <div class="inner-code">
+                let myKeysAndValues = Object.entries(Cars);<br/>
+                <br/>
+                console.log(Cars);
+            </div>
+        </div>
+        <div class="container-syntax-example-console console-color">
+            <div class="inner-code">
+                <i>(3) [Array(2), Array(2), Array(2)]</i><br/>    
+                    0 : (2) ['color', 'pink']<br/>
+                    1 : (2) ['year', 1967]<br/>
+                    2 : (2) ['city', 'Toronto']
+            </div>
+        </div>
+    </div>  
+</div>
+<!-- ---------------------------------------------- -->
+<br/>
+<br/>
+<!-- -------------------------------------- -->
+<div class="section-wrapper">
+    <div class="container-column column-halves">
+        <div class="column-title">
+            Replacing Key Name in objects:
+            </div>
+        <div class="container-syntax-example-console syntax-color">
+            <div class="inner-code">
+                myObj.newKeyName = myObj.key1;
+                delete myObj.key1;
+            </div>
+        </div>
+        <div class="container-syntax-example-console example-color">
+            <div class="inner-code">
+                 Cars.lesCouleurs = Cars.color;<br/>
+                 delete Cars.color;<br/>
+                <br/>
+                console.log(Cars);
+            </div>
+        </div>
+        <div class="container-syntax-example-console console-color">
+            <div class="inner-code">
+                <i>{year: 1967, city: 'Toronto', lesCouleurs: 'pink'}</i>
+            </div>
+        </div>
+    </div>
+    <div class="container-column column-halves">
+    <div class="column-title">
+            Replacing value in objects:
+            </div>
+        <div class="container-syntax-example-console syntax-color">
+            <div class="inner-code">
+                myObj.key1 = "new value";
+            </div>
+        </div>
+        <div class="container-syntax-example-console example-color">
+            <div class="inner-code">
+                Cars.color = "neon yellow";<br/>
+                <br/>
+                console.log(Cars);
+            </div>
+        </div>
+        <div class="container-syntax-example-console console-color">
+            <div class="inner-code">
+                <i>{color: 'neon yellow', year: 1967, city: 'Toronto'}</i><br/>
+            </div>
+        </div>
+    </div>  
+</div>    
+<!-- ---------------------------------------------- -->
+<br/>
+<br/>
+<!-- -------------------------------------- -->
+<div class="section-wrapper">
+    <div class="container-column column-halves">
+        <div class="column-title">
+            Replacing Key Name in objects:
+            </div>
+        <div class="container-syntax-example-console syntax-color">
+            <div class="inner-code">
+                myObj.newKeyName = myObj.key1;
+                delete myObj.key1;
+            </div>
+        </div>
+        <div class="container-syntax-example-console example-color">
+            <div class="inner-code">
+                 Cars.lesCouleurs = Cars.color;<br/>
+                 delete Cars.color;<br/>
+                <br/>
+                console.log(Cars);
+            </div>
+        </div>
+        <div class="container-syntax-example-console console-color">
+            <div class="inner-code">
+                <i>{year: 1967, city: 'Toronto', lesCouleurs: 'pink'}</i>
+            </div>
+        </div>
+    </div>
+    <div class="container-column column-halves">
+    <div class="column-title">
+            Replacing value in objects:
+            </div>
+        <div class="container-syntax-example-console syntax-color">
+            <div class="inner-code">
+                myObj.key1 = "new value";
+            </div>
+        </div>
+        <div class="container-syntax-example-console example-color">
+            <div class="inner-code">
+                Cars.color = "neon yellow";<br/>
+                <br/>
+                console.log(Cars);
+            </div>
+        </div>
+        <div class="container-syntax-example-console console-color">
+            <div class="inner-code">
+                <i>{color: 'neon yellow', year: 1967, city: 'Toronto'}</i><br/>
+            </div>
+        </div>
+    </div>  
+</div>      
     <script src="../objects/objects.js"></script>
 </body>
 </html>
