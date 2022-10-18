@@ -395,7 +395,7 @@
                 };<br/><br/>
                 let myString = "dummy string"<br/>
                 <br/>
-                
+
                 myArray.forEach(key => {<br/>
                     console.log(key);<br/>
                 });<br/>
@@ -472,7 +472,7 @@
 <div class="section-wrapper">
     <div class="container-column column-halves">
         <div class="column-title left-align">
-            Using <b><i><u>for...in</u></i></b> on arrays, objects or strings:
+            Using <b><i><u>for</u></i></b> on arrays, or strings:
         </div>
         <div class="column-description">
         </div>
@@ -488,17 +488,13 @@
                 };<br/><br/>
                 let myString = "dummy string"<br/>
                 <br/>
-                for (let key in myArray){<br/>
-                    console.log(`for...in array => ${myArray[key]}`);<br/>
-                    };<br/>
-                    <br/>
-                for (let key in myObj){<br/>
-                    console.log(`for...in Object=> ${myObj[key]}`);<br/>
-                    };<br/>
-                    <br/>
-                for (let key in myString){<br/>
-                    console.log(`for...in String=> ${myString[key]}`);<br/>
-                    };
+                for (let i = 0; i < myArray.length; i++){<br/>
+                    console.log(i, myArray[i]);<br/>
+                   };<br/>
+                   <br/>
+                   for (let i = 0; i < myString.length; i++){<br/>
+                       console.log(i, myString[i]);<br/>
+                   };
             </div>
         </div>
         <div class="container-syntax-example-console example-color">
@@ -506,25 +502,21 @@
                 Example
             </div>
             <div class="inner-code">
-                let Apples = ["Red Delicious", "Bright Red", "Ontario"];<br/><br/>
-                let Student = {<br/>
-                    fName: "Jack",<br/>
-                    lName: "Dawson",<br/>
-                    friend: "Fabrizio"<br/>
-                }<br/><br/>
-                let harryQuote = "Ron!"<br/>
-                <br/><br/>
-                for (let key in Apples){<br/>
-                    console.log(`for...in array => ${Apples[key]}`);<br/>
-                    };<br/>
-                    <br/>
-                for (let key in Student){<br/>
-                    console.log(`for...in Object=> ${Student[key]}`);<br/>
-                    };<br/>
-                    <br/>
-                for (let key in harryQuote){<br/>
-                    console.log(`for...in String=> ${harryQuote[key]}`);<br/>
-                    };
+                let myArray = [1, 2, 3];<br/><br/>
+                let myObj = {<br/>
+                    key1: value1,<br/>
+                    key2: value2<br/>
+                };<br/><br/>
+                let myString = "dummy string"<br/>
+                <br/>
+
+                for (let i = 0; i < Apples.length; i++){<br/>
+                    console.log(`${i}(index), ${Apples[i]}`);<br/>
+                   };<br/>
+                   <br/>
+                   for (let i = 0; i < harryQuote.length; i++){<br/>
+                       console.log(`${i}(index), ${harryQuote[i]}`);<br/>
+                   };
             </div>
         </div>
         <div class="container-syntax-example-console console-color">
@@ -532,22 +524,19 @@
                 Console
             </div>
             <div class="inner-code">
-                for...in array => Red Delicious<br/>
-                for...in array => Bright Red<br/>
-                for...in array => Ontario<br/><br/>
-                for...in Object=> Jack<br/>
-                for...in Object=> Dawson<br/>
-                for...in Object=> Fabrizio<br/><br/>
-                for...in String=> R<br/>
-                for...in String=> o<br/>
-                for...in String=> n<br/>
-                for...in String=> !
+                0(index), Red Delicious<br/>
+                1(index), Bright Red<br/>
+                2(index), Ontario<br/>
+                <br/>0(index), R<br/>
+                1(index), o<br/>
+                2(index), n<br/>
+                3(index), !<br/>
             </div>
         </div>
     </div>
     <div class="container-column column-halves">
         <div class="column-title left-align">
-            Using <b><i><u>forEach</u></i></b> on arrays, objects or strings:
+            Using <b><i><u>for...of</u></i></b> on arrays, or strings:
         </div>
         <div class="column-description">
         </div>
@@ -556,21 +545,20 @@
                 Syntax
             </div>
             <div class="inner-code">
-                myArray.forEach(key => {<br/>
-                    console.log(key);<br/>
-                });<br/>
+                let myArray = [1, 2, 3];<br/><br/>
+                let myObj = {<br/>
+                    key1: value1,<br/>
+                    key2: value2<br/>
+                };<br/><br/>
+                let myString = "dummy string"<br/>
                 <br/>
-                Object.keys(myArray).forEach(key => {<br/>
-                    console.log(`${key}(index), ${myArray[key]}`);<br/>
-                });<br/>
-                <br/>                
-                Object.keys(myObj).forEach(key => {<br/>
-                    console.log(`${key}, ${myObj[key]}`);<br/>
-                });<br/>
+                for (let key of myArray){<br/>
+                    console.log(${myArray.indexOf(key)}(index), ${key}`);<br/>
+                    };<br/>
                 <br/>
-                Object.keys(myString).forEach(key => {<br/>
-                    console.log(`${key}(index), ${myString[key]}`);<br/>
-                });
+                for (let key of harryQuote){<br/>
+                    console.log(`${myString.indexOf(key)}(index), ${key}`);<br/>
+                    };
             </div>
         </div>
         <div class="container-syntax-example-console example-color">
@@ -586,21 +574,13 @@
                 }<br/><br/>
                 let harryQuote = "Ron!"<br/>
                 <br/><br/>
-                Apples.forEach(key => {<br/>
-                    console.log(`${key}`);<br/>
-                });<br/>
+                for (let key of Apples){<br/>
+                    console.log(`${Apples.indexOf(key)}(index), ${key}`);<br/>
+                    };<br/>
                 <br/>
-                Object.keys(Apples).forEach(key => {<br/>
-                    console.log(`${key}(index), ${Apples[key]}`);<br/>
-                });<br/>
-                <br/>
-                Object.keys(Student).forEach(key => {<br/>
-                    console.log(`${key}, ${Student[key]}`);<br/>
-                });<br/>
-                <br/>
-                Object.keys(harryQuote).forEach(key => {<br/>
-                    console.log(`${key}(index), ${harryQuote[key]}`);<br/>
-                });
+                for (let key of harryQuote){<br/>
+                    console.log(`${harryQuote.indexOf(key)}(index), ${key}`);<br/>
+                    };
             </div>
         </div>
         <div class="container-syntax-example-console console-color">
@@ -608,15 +588,9 @@
                 Console
             </div>
             <div class="inner-code">
-                Red Delicious<br/>
-                Bright Red<br/>
-                Ontario<br/>
-                <br/>0(index), Red Delicious<br/>
+                0(index), Red Delicious<br/>
                 1(index), Bright Red<br/>
                 2(index), Ontario<br/>
-                <br/>fName, Jack<br/>
-                lName, Dawson<br/>
-                friend, Fabrizio<br/>
                 <br/>0(index), R<br/>
                 1(index), o<br/>
                 2(index), n<br/>
