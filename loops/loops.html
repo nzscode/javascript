@@ -160,10 +160,10 @@
     <div class="section-wrapper">
         <div class="container-column column-halves">
             <div class="column-title left-align">
-                To iterate through the keys of an object:
+                To iterate through the keys of an object <i><b><u>using for ... in</u></b></i> :
             </div>
             <div class="column-description">
-                For strings and arrays For...of is better.
+                **For strings and arrays For...of is better.
             </div>
             <div class="container-syntax-example-console syntax-color">
                 <div class="title-syntax-example-console">
@@ -175,7 +175,7 @@
                     }
                 </div>
             </div>
-            <div class="container-syntax-example-console syntax-color">
+            <div class="container-syntax-example-console example-color">
                 <div class="title-syntax-example-console">
                     Example
                 </div>
@@ -202,10 +202,10 @@
             <br/>
             <br/>
             <div class="column-title left-align">
-                To iterate through the values of an object:
+                To iterate through the values of an object <i><b><u>using for ... in</u></b></i> :
             </div>
             <div class="column-description">
-                For strings and arrays For...of is better.
+                **For strings and arrays For...of is better.
             </div>
             <div class="container-syntax-example-console syntax-color">
                 <div class="title-syntax-example-console">
@@ -245,7 +245,7 @@
         </div>
         <div class="container-column column-halves">
         <div class="column-title">
-            To iterate through the values:
+            To iterate through the values <i><b><u>using for ... of</u></b></i> :
         </div>
         <div class="column-description">
             Best for arrays, strings, generators, maps, sets<br/>
@@ -297,6 +297,335 @@
         </div>
     </div>
 </div>
+<!-- --------------------------------------------- -->
+<br/>
+<br/>
+<!-- --------------------------------------------- -->
+<div class="section-wrapper">
+    <div class="container-column column-halves">
+        <div class="column-title left-align">
+            Using <b><i><u>for...in</u></i></b> on arrays, objects or strings:
+        </div>
+        <div class="column-description">
+        </div>
+        <div class="container-syntax-example-console syntax-color">
+            <div class="title-syntax-example-console">
+                Syntax
+            </div>
+            <div class="inner-code">
+                let myArray = [1, 2, 3];<br/><br/>
+                let myObj = {<br/>
+                    key1: value1,<br/>
+                    key2: value2<br/>
+                };<br/><br/>
+                let myString = "dummy string"<br/>
+                <br/>
+                for (let key in myArray){<br/>
+                    console.log(`for...in array => ${myArray[key]}`);<br/>
+                    };<br/>
+                    <br/>
+                for (let key in myObj){<br/>
+                    console.log(`for...in Object=> ${myObj[key]}`);<br/>
+                    };<br/>
+                    <br/>
+                for (let key in myString){<br/>
+                    console.log(`for...in String=> ${myString[key]}`);<br/>
+                    };
+            </div>
+        </div>
+        <div class="container-syntax-example-console example-color">
+            <div class="title-syntax-example-console">
+                Example
+            </div>
+            <div class="inner-code">
+                let Apples = ["Red Delicious", "Bright Red", "Ontario"];<br/><br/>
+                let Student = {<br/>
+                    fName: "Jack",<br/>
+                    lName: "Dawson",<br/>
+                    friend: "Fabrizio"<br/>
+                }<br/><br/>
+                let harryQuote = "Ron!"<br/>
+                <br/><br/>
+                for (let key in Apples){<br/>
+                    console.log(`for...in array => ${Apples[key]}`);<br/>
+                    };<br/>
+                    <br/>
+                for (let key in Student){<br/>
+                    console.log(`for...in Object=> ${Student[key]}`);<br/>
+                    };<br/>
+                    <br/>
+                for (let key in harryQuote){<br/>
+                    console.log(`for...in String=> ${harryQuote[key]}`);<br/>
+                    };
+            </div>
+        </div>
+        <div class="container-syntax-example-console console-color">
+            <div class="title-syntax-example-console">
+                Console
+            </div>
+            <div class="inner-code">
+                for...in array => Red Delicious<br/>
+                for...in array => Bright Red<br/>
+                for...in array => Ontario<br/><br/>
+                for...in Object=> Jack<br/>
+                for...in Object=> Dawson<br/>
+                for...in Object=> Fabrizio<br/><br/>
+                for...in String=> R<br/>
+                for...in String=> o<br/>
+                for...in String=> n<br/>
+                for...in String=> !
+            </div>
+        </div>
+    </div>
+    <div class="container-column column-halves">
+        <div class="column-title left-align">
+            Using <b><i><u>forEach</u></i></b> on arrays, objects or strings:
+        </div>
+        <div class="column-description">
+        </div>
+        <div class="container-syntax-example-console syntax-color">
+            <div class="title-syntax-example-console">
+                Syntax
+            </div>
+            <div class="inner-code">
+                let myArray = [1, 2, 3];<br/><br/>
+                let myObj = {<br/>
+                    key1: value1,<br/>
+                    key2: value2<br/>
+                };<br/><br/>
+                let myString = "dummy string"<br/>
+                <br/>
+                
+                myArray.forEach(key => {<br/>
+                    console.log(key);<br/>
+                });<br/>
+                <br/>
+                Object.keys(myArray).forEach(key => {<br/>
+                    console.log(`${key}(index), ${myArray[key]}`);<br/>
+                });<br/>
+                <br/>                
+                Object.keys(myObj).forEach(key => {<br/>
+                    console.log(`${key}, ${myObj[key]}`);<br/>
+                });<br/>
+                <br/>
+                Object.keys(myString).forEach(key => {<br/>
+                    console.log(`${key}(index), ${myString[key]}`);<br/>
+                });
+            </div>
+        </div>
+        <div class="container-syntax-example-console example-color">
+            <div class="title-syntax-example-console">
+                Example
+            </div>
+            <div class="inner-code">
+                let Apples = ["Red Delicious", "Bright Red", "Ontario"];<br/><br/>
+                let Student = {<br/>
+                    fName: "Jack",<br/>
+                    lName: "Dawson",<br/>
+                    friend: "Fabrizio"<br/>
+                }<br/><br/>
+                let harryQuote = "Ron!"<br/>
+                <br/><br/>
+                Apples.forEach(key => {<br/>
+                    console.log(`${key}`);<br/>
+                });<br/>
+                <br/>
+                Object.keys(Apples).forEach(key => {<br/>
+                    console.log(`${key}(index), ${Apples[key]}`);<br/>
+                });<br/>
+                <br/>
+                Object.keys(Student).forEach(key => {<br/>
+                    console.log(`${key}, ${Student[key]}`);<br/>
+                });<br/>
+                <br/>
+                Object.keys(harryQuote).forEach(key => {<br/>
+                    console.log(`${key}(index), ${harryQuote[key]}`);<br/>
+                });
+            </div>
+        </div>
+        <div class="container-syntax-example-console console-color">
+            <div class="title-syntax-example-console">
+                Console
+            </div>
+            <div class="inner-code">
+                Red Delicious<br/>
+                Bright Red<br/>
+                Ontario<br/>
+                <br/>0(index), Red Delicious<br/>
+                1(index), Bright Red<br/>
+                2(index), Ontario<br/>
+                <br/>fName, Jack<br/>
+                lName, Dawson<br/>
+                friend, Fabrizio<br/>
+                <br/>0(index), R<br/>
+                1(index), o<br/>
+                2(index), n<br/>
+                3(index), !
+            </div>
+        </div>
+</div>
+</div>
+<!-- --------------------------------------------- -->
+<br/>
+<br/>
+<!-- --------------------------------------------- -->
+<div class="section-wrapper">
+    <div class="container-column column-halves">
+        <div class="column-title left-align">
+            Using <b><i><u>for...in</u></i></b> on arrays, objects or strings:
+        </div>
+        <div class="column-description">
+        </div>
+        <div class="container-syntax-example-console syntax-color">
+            <div class="title-syntax-example-console">
+                Syntax
+            </div>
+            <div class="inner-code">
+                let myArray = [1, 2, 3];<br/><br/>
+                let myObj = {<br/>
+                    key1: value1,<br/>
+                    key2: value2<br/>
+                };<br/><br/>
+                let myString = "dummy string"<br/>
+                <br/>
+                for (let key in myArray){<br/>
+                    console.log(`for...in array => ${myArray[key]}`);<br/>
+                    };<br/>
+                    <br/>
+                for (let key in myObj){<br/>
+                    console.log(`for...in Object=> ${myObj[key]}`);<br/>
+                    };<br/>
+                    <br/>
+                for (let key in myString){<br/>
+                    console.log(`for...in String=> ${myString[key]}`);<br/>
+                    };
+            </div>
+        </div>
+        <div class="container-syntax-example-console example-color">
+            <div class="title-syntax-example-console">
+                Example
+            </div>
+            <div class="inner-code">
+                let Apples = ["Red Delicious", "Bright Red", "Ontario"];<br/><br/>
+                let Student = {<br/>
+                    fName: "Jack",<br/>
+                    lName: "Dawson",<br/>
+                    friend: "Fabrizio"<br/>
+                }<br/><br/>
+                let harryQuote = "Ron!"<br/>
+                <br/><br/>
+                for (let key in Apples){<br/>
+                    console.log(`for...in array => ${Apples[key]}`);<br/>
+                    };<br/>
+                    <br/>
+                for (let key in Student){<br/>
+                    console.log(`for...in Object=> ${Student[key]}`);<br/>
+                    };<br/>
+                    <br/>
+                for (let key in harryQuote){<br/>
+                    console.log(`for...in String=> ${harryQuote[key]}`);<br/>
+                    };
+            </div>
+        </div>
+        <div class="container-syntax-example-console console-color">
+            <div class="title-syntax-example-console">
+                Console
+            </div>
+            <div class="inner-code">
+                for...in array => Red Delicious<br/>
+                for...in array => Bright Red<br/>
+                for...in array => Ontario<br/><br/>
+                for...in Object=> Jack<br/>
+                for...in Object=> Dawson<br/>
+                for...in Object=> Fabrizio<br/><br/>
+                for...in String=> R<br/>
+                for...in String=> o<br/>
+                for...in String=> n<br/>
+                for...in String=> !
+            </div>
+        </div>
+    </div>
+    <div class="container-column column-halves">
+        <div class="column-title left-align">
+            Using <b><i><u>forEach</u></i></b> on arrays, objects or strings:
+        </div>
+        <div class="column-description">
+        </div>
+        <div class="container-syntax-example-console syntax-color">
+            <div class="title-syntax-example-console">
+                Syntax
+            </div>
+            <div class="inner-code">
+                myArray.forEach(key => {<br/>
+                    console.log(key);<br/>
+                });<br/>
+                <br/>
+                Object.keys(myArray).forEach(key => {<br/>
+                    console.log(`${key}(index), ${myArray[key]}`);<br/>
+                });<br/>
+                <br/>                
+                Object.keys(myObj).forEach(key => {<br/>
+                    console.log(`${key}, ${myObj[key]}`);<br/>
+                });<br/>
+                <br/>
+                Object.keys(myString).forEach(key => {<br/>
+                    console.log(`${key}(index), ${myString[key]}`);<br/>
+                });
+            </div>
+        </div>
+        <div class="container-syntax-example-console example-color">
+            <div class="title-syntax-example-console">
+                Example
+            </div>
+            <div class="inner-code">
+                let Apples = ["Red Delicious", "Bright Red", "Ontario"];<br/><br/>
+                let Student = {<br/>
+                    fName: "Jack",<br/>
+                    lName: "Dawson",<br/>
+                    friend: "Fabrizio"<br/>
+                }<br/><br/>
+                let harryQuote = "Ron!"<br/>
+                <br/><br/>
+                Apples.forEach(key => {<br/>
+                    console.log(`${key}`);<br/>
+                });<br/>
+                <br/>
+                Object.keys(Apples).forEach(key => {<br/>
+                    console.log(`${key}(index), ${Apples[key]}`);<br/>
+                });<br/>
+                <br/>
+                Object.keys(Student).forEach(key => {<br/>
+                    console.log(`${key}, ${Student[key]}`);<br/>
+                });<br/>
+                <br/>
+                Object.keys(harryQuote).forEach(key => {<br/>
+                    console.log(`${key}(index), ${harryQuote[key]}`);<br/>
+                });
+            </div>
+        </div>
+        <div class="container-syntax-example-console console-color">
+            <div class="title-syntax-example-console">
+                Console
+            </div>
+            <div class="inner-code">
+                Red Delicious<br/>
+                Bright Red<br/>
+                Ontario<br/>
+                <br/>0(index), Red Delicious<br/>
+                1(index), Bright Red<br/>
+                2(index), Ontario<br/>
+                <br/>fName, Jack<br/>
+                lName, Dawson<br/>
+                friend, Fabrizio<br/>
+                <br/>0(index), R<br/>
+                1(index), o<br/>
+                2(index), n<br/>
+                3(index), !
+            </div>
+        </div>
+</div>
+</div>
+
 <!-- --------------------------------------------- -->
     <script src="../loops/loops.js"></script>
 </body>
