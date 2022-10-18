@@ -8,23 +8,58 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="navigation-panel">
-        <a class="link-buttons"    href="../landingPage/landingPage.html">Home</a>
-        <a class="link-buttons" href="../functions/functions.html">Functions</a>
-        <a class="link-buttons" href="../stringMethods/stringMethods.html">String Methods</a>
-        <a class="link-buttons" href="../if/if.html">If</a>
-        <a class="link-buttons" href="../dateMethods/dateMethods.html">Date Methods</a>
-        <a class="link-buttons" href="../mathNumberMethods/mathNumberMethods.html">Math & Number Methods</a>
-        <a class="link-buttons" href="../arrayMethods/arrayMethods.html">Array Methods</a>
-        <a class="link-buttons" href="../loops/loops.html">Loops</a>
-    </div>
+<!-- ---------------------------------------------- -->
+    <div class="navbar">
+    <div class="dropdown"><button class="dropbtn"><a href="../landingPage/landingPage.html"">Home</a></button></div>
+    <div class="dropdown"><button class="dropbtn"><a href="../functions/functions.html">Functions</a></button></div>
+    <div class="dropdown"><button class="dropbtn"><a href="../stringMethods/stringMethods.html">If</a></button></div>
+    <div class="dropdown"><button class="dropbtn"><a href="../dateMethods/dateMethods.html">Date Methods</a></button></div>
+    <div class="dropdown"><button class="dropbtn"><a href="../mathNumberMethods/mathNumberMethods.html">Math & Number Methods</a></button></div>
+    <div class="dropdown"><button class="dropbtn"><a href="../arrayMethods/arrayMethods.html">Array Methods</a></button></div>
+    <div class="dropdown"><button class="dropbtn"><a href="../loops/loops.html">Loops Methods</a></button></div>    
+    <div class="dropdown">
+        <button class="dropbtn"><a href="../objects/objects.html">Object Methods</a> 
+        </button>
+        <div class="dropdown-content">
+          <a href="../objects/objects.html#Section1">Assigning Properties to an Object:</a>
+          <a href="../objects/objects.html#Section2">Accessing objects:</a>
+          <a href="../objects/objects.html#Section3">Assigning values to objects:</a>
+          <a href="../objects/objects.html#Section4">Deleting key:values from objects:</a>
+          <a href="../objects/objects.html#Section5">Finding the keys inside of objects:</a>
+          <a href="../objects/objects.html#Section6">Finding the values of objects:</a>
+          <a href="../objects/objects.html#Section7">Getting the key:value pairs from inside of objects:</a>
+          <a href="../objects/objects.html#Section8">Replacing Key Name in objects:</a>
+          <a href="../objects/objects.html#Section9">Replacing value in objects:</a>
+          <a href="../objects/objects.html#Section10">Getters</a>
+          <a href="../objects/objects.html#Section11">Setters</a>
+          <div class="dropdown">
+            <button class="dropbtn"><a href="../objects/objects.html#Section12">Object.defineProperty()</a> 
+            </button>
+            <div class="dropdown-content">
+              <a href="../objects/objects.html#Section12.1">Changing writable Attribute</a>
+              <a href="../objects/objects.html#Section12.2">Changing Enumerable Attribute</a>
+              <a href="../objects/objects.html#Section12.3">Changing Configurable Attribute</a></div>
+          
+
+          
+        </div>
+      </div> 
+        </div>
+  </div>
+
+
+<!-- ---------------------------------------- -->
+  
+    <div class="main">
+
+<!-- ---------------------------------------------- -->
 <br/>
 <br/>
 <!-- ---------------------------------------------- -->
-
 <div class="page-title">Objects</div>
 <div class="section-title">Object Creation:</div>
 <!-- -------------------------------------- -->
+
 <div class="section-wrapper">
     <div class="container-column column-thirds">
         <div class="column-title">
@@ -153,7 +188,7 @@
 <br/>
 <br/>
 <!-- -------------------------------------- -->
-<div class="section-wrapper">
+<div class="section-wrapper" id="Section1">
     <div class="container-column column-halves">
         <div class="column-title">
             Assigning Properties to an Object:
@@ -234,7 +269,7 @@
 <br/>
 <br/>
 <!-- -------------------------------------- -->
-<div class="section-wrapper">
+<div class="section-wrapper" id="Section2">
     <div class="container-column column-halves">
         <div class="column-title">
             Accessing objects:
@@ -265,7 +300,7 @@
         </div>
         
     </div>
-    <div class="container-column column-halves">
+    <div class="container-column column-halves" id="Section3">
         <div class="column-title">
             Assigning values to objects:
         </div>
@@ -297,7 +332,7 @@
 <br/>
 <!-- -------------------------------------- -->
 <div class="section-wrapper">
-    <div class="container-column column-halves">
+    <div class="container-column column-halves" id="Section4">
         <div class="column-title">
             Deleting key:values from objects:
             </div>
@@ -323,7 +358,7 @@
             </div>
         </div>
     </div>
-    <div class="container-column column-halves">
+    <div class="container-column column-halves" id="Section5">
     <div class="column-title">
             Finding the keys inside of objects:
             </div>
@@ -346,66 +381,12 @@
         </div>
     </div>  
 </div>  
-<!-- -------------------------------------- -->
-<br/>
-<br/>
-<!-- -------------------------------------- -->
-<div class="section-wrapper">
-    <div class="container-column column-halves">
-        <div class="column-title">
-            Deleting key:values from objects:
-            </div>
-        <div class="container-syntax-example-console syntax-color">
-            <div class="inner-code">
-                delete myObj.key;<br/>
-                OR<br/>
-                delete myObj['key'];
-            </div>
-        </div>
-        <div class="container-syntax-example-console example-color">
-            <div class="inner-code">
-                delete Cars.color;<br/>
-                OR<br/>
-                delete Cars['key'];<br/>
-                <br/>
-                console.log(Cars);
-            </div>
-        </div>
-        <div class="container-syntax-example-console console-color">
-            <div class="inner-code">
-                <i>{year: 1967}</i>
-            </div>
-        </div>
-    </div>
-    <div class="container-column column-halves">
-    <div class="column-title">
-            Finding the keys inside of objects:
-            </div>
-        <div class="container-syntax-example-console syntax-color">
-            <div class="inner-code">
-                let myKeys = Object.keys(myObj);
-            </div>
-        </div>
-        <div class="container-syntax-example-console example-color">
-            <div class="inner-code">
-                let carKeys = Object.keys(Cars);<br/>
-                <br/>
-                console.log(carKeys);
-            </div>
-        </div>
-        <div class="container-syntax-example-console console-color">
-            <div class="inner-code">
-                <i>{'color', 'year', 'city'}</i>
-            </div>
-        </div>
-    </div>  
-</div>  
 <!-- ---------------------------------------------- -->
 <br/>
 <br/>
 <!-- -------------------------------------- -->
 <div class="section-wrapper">
-    <div class="container-column column-halves">
+    <div class="container-column column-halves" id="Section6">
         <div class="column-title">
             Finding the values of objects:
             </div>
@@ -427,7 +408,7 @@
             </div>
         </div>
     </div>
-    <div class="container-column column-halves">
+    <div class="container-column column-halves" id="Section7">
     <div class="column-title">
             Getting the key:value pairs from inside of objects:
             </div>
@@ -458,7 +439,7 @@
 <br/>
 <!-- -------------------------------------- -->
 <div class="section-wrapper">
-    <div class="container-column column-halves">
+    <div class="container-column column-halves" id="Section8">
         <div class="column-title">
             Replacing Key Name in objects:
             </div>
@@ -482,7 +463,7 @@
             </div>
         </div>
     </div>
-    <div class="container-column column-halves">
+    <div class="container-column column-halves" id="Section9">
     <div class="column-title">
             Replacing value in objects:
             </div>
@@ -510,53 +491,456 @@
 <br/>
 <!-- -------------------------------------- -->
 <div class="section-wrapper">
-    <div class="container-column column-halves">
+    <div class="container-column column-halves" id="Section10">
         <div class="column-title">
-            Replacing Key Name in objects:
+            Getters
+            <div class="column-description">
+                Allows future access to specific Keys.
             </div>
+        </div>
         <div class="container-syntax-example-console syntax-color">
             <div class="inner-code">
-                myObj.newKeyName = myObj.key1;
-                delete myObj.key1;
+                let myObj = {<br/>
+                    key1: value1,<br/>
+                    key2: value2,<br/>
+                    <br/>
+                    get getterName(){<br/>
+                        return this.key1;<br/>
+                    }<br/>
+                };<br/>
+                <br/>
+                console.log(myObj.getterName);
             </div>
         </div>
         <div class="container-syntax-example-console example-color">
             <div class="inner-code">
-                 Cars.lesCouleurs = Cars.color;<br/>
-                 delete Cars.color;<br/>
+                 let Student = {<br/>
+                    fName: "Jane",<br/>
+                    lName: "Doe",<br/>
+                    <br/>
+                    get getFirstName(){<br/>
+                        return this.fName;<br/>
+                    }<br/>
+                };<br/>
                 <br/>
-                console.log(Cars);
+                console.log(Student.getFirstName);
             </div>
         </div>
         <div class="container-syntax-example-console console-color">
             <div class="inner-code">
-                <i>{year: 1967, city: 'Toronto', lesCouleurs: 'pink'}</i>
+                Jane
             </div>
         </div>
     </div>
-    <div class="container-column column-halves">
+    <div class="container-column column-halves" id="Section11">
     <div class="column-title">
-            Replacing value in objects:
-            </div>
+        Setters
+        <div class="column-description">
+            Allows changing specific Keys.
+        </div>
+    </div>
         <div class="container-syntax-example-console syntax-color">
             <div class="inner-code">
-                myObj.key1 = "new value";
+                let myObj = {<br/>
+                    key1: value1,<br/>
+                    key2: value2,<br/>
+                    <br/>
+                    set setterName(parameter(s)){<br/>
+                        this.key1 = parameter(s);<br/>
+                    }<br/>
+                };<br/>
+                    <br/>
+                myObj.setterName = value72;<br/>
+                    <br/>
+                console.log(myObj.key1);
             </div>
         </div>
         <div class="container-syntax-example-console example-color">
             <div class="inner-code">
-                Cars.color = "neon yellow";<br/>
-                <br/>
-                console.log(Cars);
+                let Student = {<br/>
+                    school: "Da Vinci PS",<br/>
+                    age: 10,<br/>
+                    <br/>
+                    set newSchool(schoolName){<br/>
+                        this.school = schoolName;<br/>
+                    }<br/>
+                };<br/>
+                    <br/>
+                myObj.newSchool = "J. Clarke Richardson";<br/>
+                    <br/>
+                console.log(Student.school);
             </div>
         </div>
         <div class="container-syntax-example-console console-color">
             <div class="inner-code">
-                <i>{color: 'neon yellow', year: 1967, city: 'Toronto'}</i><br/>
+                J. Clarke Richardson
             </div>
         </div>
     </div>  
 </div>      
+<!-- ---------------------------------------------- -->
+<br/>
+<br/>
+<!-- -------------------------------------- -->
+<div class="section-wrapper">
+    <div class="container-column column-halves" id="Section12">
+        <div class="column-title">
+            Adding a property and changing those property attributes using Object.defineProperty()
+        
+        <div class="column-description">
+            Setting up an Object and defining a property:
+        </div>
+        </div>
+        <div class="container-syntax-example-console syntax-color">
+            <div class="inner-code">
+                let myObj = { <br/>
+                    key1: value1<br/>                    
+                }<br/>
+                <br/>                
+                Object.defineProperty(myObj, newKeyName,{<br/>
+                    value: "value2"<br/>
+                })       <br/>                 
+                   <br/>
+                console.log(myObj);
+            </div>
+        </div>
+        <div class="container-syntax-example-console example-color">
+            <div class="inner-code">
+                 let Student = {<br/>
+                    fName: "Jane",<br/>
+                 };<br/>
+                <br/>
+                Object.defineProperty(Student, 'lName', {<br/>
+                    value: "Doe"<br/>
+                });<br/>
+                <br/>
+                console.log(Student);
+            </div>
+        </div>
+        <div class="container-syntax-example-console console-color">
+            <div class="inner-code">
+                <i>{fName: 'Jane', lName: 'Doe'}</i>
+            </div>
+        </div>
+    </div>
+    <div class="container-column column-halves" id="Section12.1">
+    <div class="column-title">
+        Making the new defined property attribute over-writable:
+        <div class="column-description">
+            Changing the writable attribute. (default = false)<br/>
+            Can this privately declared value be over-written as a property of myObj?
+        </div>
+    </div>
+        <div class="container-syntax-example-console syntax-color">
+            <div class="inner-code">
+                let myObj = { <br/>
+                    key1: value1<br/>                    
+                }<br/>
+                <br/>                
+                Object.defineProperty(myObj, newKeyName,{<br/>
+                    value: "value2",<br/>
+                    writable: true<br/>
+                })       <br/>                 
+                   <br/>
+                    <br/>
+                   myObj.newKeyName = "VALUE2";<br/>
+                <br/>
+                console.log(myObj);
+            </div>
+        </div>
+        <div class="container-syntax-example-console example-color">
+            <div class="inner-code">
+                let School = {<br/>
+                    name: "Da Vinci PS"<br/>
+                };<br/>
+                <br/>
+                Object.defineProperty(Student, 'district',{<br/>
+                    value: "Durham Region",<br/>
+                    writable: true<br/>
+                });<br/>
+                <br/>
+                School.district = "Toronto Region";<br/>
+                <br/>
+                console.log(School);
+            </div>
+        </div>
+        <div class="container-syntax-example-console console-color">
+            <div class="inner-code">
+                <i>{name: 'Da Vinci PS', district: 'Toronto Region'}</i>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------------------------------------------- -->
+<br/>
+<br/>
+<!-- -------------------------------------- -->
+<div class="section-wrapper">
+    <div class="container-column column-halves" id="Section12.2">
+        <div class="column-title">
+            Making the new defined property attribute iterable:
+            <div class="column-description">
+                Changing the enumerable attribute. (default = false)<br/>
+                Can this privately declared key/value be iterated as if part of myObj?
+            </div>
+        </div>
+            <div class="container-syntax-example-console syntax-color">
+                <div class="inner-code">
+                    let myObj = { <br/>
+                        key1: value1<br/>                    
+                    }<br/>
+                    <br/>                
+                    Object.defineProperty(myObj, newKeyName,{<br/>
+                        value: "value2",<br/>
+                        enumerable: true<br/>
+                    })<br/>
+                        <br/>
+                       for (let key in myObj){ <br/>
+                        console.log(key);<br/>
+                       };<br/>
+                    
+                </div>
+            </div>
+            <div class="container-syntax-example-console example-color">
+                <div class="inner-code">
+                    let Student = {<br/>
+                        fName: "Mary",<br/>
+                        lName: "Brown",
+                        eyes: "green"<br/>
+                    };<br/>
+                    <br/>
+                    Object.defineProperty(Student, 'age',{<br/>
+                        value: 19,<br/>
+                        enumerable: true<br/>
+                    });<br/>
+                    <br/>
+                    for (let key in Student){<br/>
+                        console.log(key);<br/>
+                    };
+                </div>
+            </div>
+            <div class="container-syntax-example-console console-color">
+                <div class="inner-code">
+                    fName<br/>
+                    lName<br/>
+                    eyes<br/>
+                    age<br/>
+                </div>
+            </div>
+    </div>
+    <div class="container-column column-halves" id="Section12.3">
+        <div class="column-title">
+            Making the new defined property attribute deletable:
+            <div class="column-description">
+                Changing the configurable attribute. (default = false)<br/>
+                Can this privately declared key/value be deleted as if part of myObj?
+            </div>
+        </div>
+            <div class="container-syntax-example-console syntax-color">
+                <div class="inner-code">
+                    let myObj = { <br/>
+                        key1: value1<br/>                    
+                    }<br/>
+                    <br/>                
+                    Object.defineProperty(myObj, newKeyName,{<br/>
+                        value: "value2",<br/>
+                        configurable: true<br/>
+                    })<br/>
+                        <br/>
+                       delete myObj.newKeyName; <br/>
+                       <br/>
+                        console.log(myObj);                    
+                </div>
+            </div>
+            <div class="container-syntax-example-console example-color">
+                <div class="inner-code">
+                    let Student = {<br/>
+                        fName: "Mary",<br/>
+                        lName: "Brown",
+                        eyes: "green"<br/>
+                    };<br/>
+                    <br/>
+                    Object.defineProperty(Student, 'age',{<br/>
+                        value: 19,<br/>
+                        configurable: true<br/>
+                    });<br/>
+                    <br/>
+                    delete Student.age;<br/>
+                    <br/>
+                        console.log(Student);
+                </div>
+            </div>
+            <div class="container-syntax-example-console console-color">
+                <div class="inner-code">
+                    <i>{fName: 'Mary', lName: 'Brown', eyes: 'green'}</i>
+                </div>
+            </div>
+    </div>
+</div>
+
+<!-- ---------------------------------------------- -->
+<br/>
+<br/>
+<!-- -------------------------------------- -->
+<div class="section-wrapper">
+    <div class="container-column column-halves" id="Section13">
+        <div class="column-title">
+            Referencing an Object using this
+            <div class="column-description">
+                Changing the enumerable attribute. (default = false)<br/>
+                Can this privately declared key/value be iterated as if part of myObj?
+            </div>
+        </div>
+            <div class="container-syntax-example-console syntax-color">
+                <div class="inner-code">
+                    let myObj = { <br/>
+                        key1: value1<br/>                    
+                    }<br/>
+                    <br/>                
+                    let myObj2 = {
+                        key1: value22<br/>
+                    };<br/>
+                        <br/>
+                       function printObj(){<br/>
+                        console.log(this.key1)<br/>
+                       };<br/>
+                       <br/>
+
+                       <div class="column-description grey-text">
+                        Assigning the function printObj as a property of the myObj object.<br/>
+                       Essentially making it:<br/>
+                       myObj = {<br/>
+                           str: "string",<br/>
+                           num: 123,<br/>
+                           printObj: printObj;<br/>
+                       }<br/>
+                    </div>                       
+                       myObj.key3 = printObj;<br/>
+                       <br/>
+                       <div class="column-description grey-text">
+                        invoking the myObj.printObj property, make sure to include the ( )
+                    </div>
+                       myObj.key3;
+                    
+                </div>
+            </div>
+            <div class="container-syntax-example-console example-color">
+                <div class="inner-code">
+                    let List = {<br/>
+                        vegName: "carrots",<br/>
+                        size: "large"<br/>
+                    };<br/>
+                    <br/>
+                    <div class="column-description grey-text">
+                        Can include a parameter if wanted. ex: quantity
+                    </div>
+                    function printList(quantity){<br/>
+                        console.log(`We need ${quantity} ${this.vegName}`);<br/>
+                    };<br/>
+                    <br/>
+                    List.printList = printList;<br/>
+                    <br/>
+                    <div class="column-description grey-text">
+                        Since a quantity parameter is accepted, we can indicate the quantity as an argument.
+                    </div>
+                    List.printList(7);
+                </div>
+            </div>
+            <div class="container-syntax-example-console console-color">
+                <div class="inner-code">
+                    We need 7 carrots
+                </div>
+            </div>
+    </div>
+    <div class="container-column column-halves" id="Section12.3">
+        <div class="column-title">
+            Iterating through the key:values of an object
+            <div class="column-description">
+                
+            </div>
+        </div>
+            <div class="container-syntax-example-console syntax-color">
+                <div class="inner-code">
+                    let myObj = { <br/>
+                        key1: value1,
+                        key2: value2,
+                        key3: value3<br/>                    
+                    }<br/>
+                    <br/>                
+                    for (let key in myObj){
+                        console.log(key);
+                    }
+                    <br/>                   
+                </div>
+            </div>
+            <div class="container-syntax-example-console example-color">
+                <div class="inner-code">
+                    let Student = {<br/>
+                        fName: "Lily",<br/>
+                        lName: "Ramon",
+                        eyes: "blue"<br/>
+                    };<br/>
+                    <br/>
+                    for (let key in Student){<br/>
+                        console.log(`key: value => ${key}: ${Student[key]}`)<br/>
+                    };<br/>                
+                </div>
+            </div>
+            <div class="container-syntax-example-console console-color">
+                <div class="inner-code">
+                    key: value => fName: Lily<br/>
+                    key: value => lName: Ramon<br/>
+                    key: value => eyes: blue<br/>
+                </div>
+            </div>
+            <!-- --------------------------------------- -->
+            <br/>
+            <br/>
+            <!-- --------------------------------------- -->
+            <div class="column-title">
+                Using <i><b>for...in</b></i> to update values of properties
+                <div class="column-description">                    
+                </div>
+            </div>
+                <div class="container-syntax-example-console syntax-color">
+                    <div class="inner-code">
+                        let myObj = { <br/>
+                            key1: value1,<br/>
+                            key2: value2,<br/>
+                            key3: value3<br/>                    
+                        }<br/>
+                        <br/>                
+                        for (let key in myObj){<br/>
+                            let obj = myObj[key] + "!";<br/>
+                            console.log(`${key}: ${obj}`);<br/>
+                        }
+                        <br/>                   
+                    </div>
+                </div>
+                <div class="container-syntax-example-console example-color">
+                    <div class="inner-code">
+                        let Apples = {<br/>
+                            name: "Red Delicious",<br/>
+                            color: "Bright Red",<br/>
+                            grownIn: "Ontario"<br/>
+                        };<br/>
+                        <br/>
+                        for (let key in Student){<br/>
+                            let appleDescription = Apples[key] + "!";<br/>
+                            console.log(`key: value => ${key}: ${appleDescription}`)<br/>
+                        };<br/>                
+                    </div>
+                </div>
+                <div class="container-syntax-example-console console-color">
+                    <div class="inner-code">
+                        name : Red Delicious!<br/>
+                        color : Bright Red!<br/>
+                        grownIn : Ontario!<br/>
+                    </div>
+                </div>
+    </div>
+</div>
+</div>
     <script src="../objects/objects.js"></script>
 </body>
 </html>
