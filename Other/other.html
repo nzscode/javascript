@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Other/other.css">
+    <title>Document</title>
+</head>
+<body>
+<!-- --------------------------------- -->
+<div class="section-title">
+    <!-- Insert Section title here -->
+</div>
+<div class="column-title text-align-center">
+    <!-- Insert Section description here -->
+</div>
+<!-- --------------------------------- -->
+
+    <div class="section-wrapper">
+        <div class="container-column column-halves">
+            <div class="column-title left-align">
+                <!-- Insert Title Here -->               
+            </div>
+            <div class="column-description">
+                <!-- Insert description here -->
+            </div>
+            <div class="container-syntax-example-console syntax-color">
+                <div class="title-syntax-example-console">
+                    Example
+                </div>
+                <div class="inner-code">
+                    <!-- Inser Syntax code here -->
+                    <pre class="tab">
+                        <code> 
+                            
+                        </code>
+                       </pre>
+                </div>
+            </div>
+            <div class="container-syntax-example-console console-color">
+                <div class="title-syntax-example-console">
+                    Console
+                </div>
+                <div class="inner-code">
+                   <!-- Insert Console code here -->
+                   <pre class="tab">
+                    <code> 
+                        
+                    </code>
+                   </pre>
+                </div>
+            </div>
+        </div>        
+    </div>
+<!-- --------------------------------------------- -->
+<br/>
+<br/>
+<!-- --------------------------------------------- -->
+<!-- --------------------------------- -->
+<div class="section-title">
+    <!-- Insert Section title here -->
+    Labels with Break and Continue
+</div>
+<div class="column-title text-align-center">
+    <!-- Insert Section description here -->
+    Helps with loops when using break and continue.
+</div>
+<!-- --------------------------------- -->
+
+    <div class="section-wrapper">
+        <div class="container-column column-halves">
+            <div class="column-title left-align">
+                <!-- Insert Title Here -->               
+            </div>
+            <div class="column-description">
+                <!-- Insert description here -->
+                Using continue with a label, is the same as using a break instead.<br/>
+                continue + label === break
+            </div>
+            <div class="container-syntax-example-console syntax-color">
+                <div class="title-syntax-example-console">
+                    Example
+                </div>
+                <div class="inner-code">
+                    <!-- Insert Syntax code here -->                    
+                    <code><pre class="tab">
+                    let grades = [
+                        [1,2,3],
+                        [9,8,7],
+                        [25,26,27]
+                    ]
+
+                    OuterLoop: for(let i = 0; &lt; igrades.length; i++){
+                        InnerLoop: for(let k =0; k &lt; grades[i].length;k++){
+                            console.log(grades[i][k]);
+                            if (grades[i][k] === 8){
+                                console.log("You found the 8");
+                                continue OuterLoop;
+                            }
+                        }console.log("doing stuff");
+                    }
+                    console.log("~~~~~~")<span class="comment">
+                        //this code is ignored with continue OuterLoop, but not ignored with break</span></code></pre>
+                </div>
+            </div>
+            <!-- <div class="container-syntax-example-console example-color">
+                <div class="title-syntax-example-console">
+                    Example
+                </div>
+                <div class="inner-code"> -->
+                    <!-- Insert Example code here -->
+                <!-- </div>
+            </div> -->
+            <div class="container-syntax-example-console console-color">
+                <div class="title-syntax-example-console">
+                    Console
+                </div>
+                <div class="inner-code">
+                   <!-- Insert Console code here -->
+                   <code>
+                    <pre class="tab">
+                        1
+                        2
+                        3
+                        doing stuff
+                        9
+                        8
+                        You found the 8
+                        25
+                        26
+                        27
+                        doing stuff
+                   </pre>
+                </code>
+                </div>
+            </div>
+        </div>        
+    </div>
+<!-- --------------------------------------------- -->
+<br/>
+<br/>
+<!-- --------------------------------------------- -->
+<!-- --------------------------------- -->
+<div class="section-title">
+    <!-- Insert Section title here -->
+</div>
+<div class="column-title text-align-center">
+    <!-- Insert Section description here -->
+</div>
+<!-- --------------------------------- -->
+
+    <div class="section-wrapper">
+        <div class="container-column column-halves">
+            <div class="column-title left-align">
+                <!-- Insert Title Here -->
+                Functions <b><u>call(), apply()</u></b>          
+            </div>
+            <div class="column-description">
+                Accessing this inside functions using call() and apply()
+            </div>
+            <div class="container-syntax-example-console syntax-color">
+                <div class="title-syntax-example-console">
+                    Example
+                </div>
+                <div class="inner-code">
+                    <!-- Inser Syntax code here -->
+                    <pre class="tab"><code>
+                            function printThis(name){
+                                console.log(name);
+                                console.log(this);
+                            }
+                            
+                            printThis.call("this", "Jenna");
+                            <span class="comment">//for apply you would put "Jenna" iside an array.
+                                ex: printThis.apply("this", ["Jenna"]);
+                            </span></code></pre>
+                </div>
+            </div>
+            <div class="container-syntax-example-console console-color">
+                <div class="title-syntax-example-console">
+                    Console
+                </div>
+                <div class="inner-code">
+                   <!-- Insert Console code here -->
+                   <pre class="tab">
+                    <code> 
+                        Jenna
+                        String {'this'}
+                    </code>
+                   </pre>
+                </div>
+            </div>
+        </div>        
+    </div>
+<!-- --------------------------------------------- -->
+<br/>
+<br/>
+<!-- --------------------------------------------- -->
+
+    <div class="section-wrapper">
+        <div class="container-column column-halves">
+            <div class="column-title left-align">
+                <!-- Insert Title Here -->   
+                Functions <b><u>bind()</u></b>            
+            </div>
+            <div class="column-description">
+                <!-- Insert description here -->
+                Must be assigned to a new variable since it creates a new function.<br/>
+                And unlike apply, there is no need to make the arguments into an array.
+            </div>
+            <div class="container-syntax-example-console syntax-color">
+                <div class="title-syntax-example-console">
+                    Example
+                </div>
+                <div class="inner-code">
+                    <!-- Inser Syntax code here -->
+                    <pre class="tab"><code>
+                        function printThis(name){
+                            console.log(name);
+                            console.log(this);
+                        }
+                        
+                        let newFunction = printThis.bind("this", "Jenna");
+
+                        newFunction();
+                    </code></pre>
+                </div>
+            </div>
+            <div class="container-syntax-example-console console-color">
+                <div class="title-syntax-example-console">
+                    Console
+                </div>
+                <div class="inner-code">
+                   <!-- Insert Console code here -->
+                   <pre class="tab">
+                    <code> 
+                        Jenna
+                        String {'this'}
+                    </code>
+                   </pre>
+                </div>
+            </div>
+        </div>        
+    </div>
+<!-- --------------------------------------------- -->
+<br/>
+<br/>
+<!-- --------------------------------------------- -->
+    <script src="../Other/other.js"></script>
+</body>
+</html>
