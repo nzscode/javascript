@@ -599,6 +599,146 @@
         </div>
 </div>
 </div>
+<!-- --------------------------------------------- -->
+<br/>
+<br/>
+<!-- --------------------------------------------- -->
+<div class="section-wrapper">
+    <div class="container-column column-halves">
+        <div class="column-title left-align">
+            Converting <b><i><u>for</u></i></b> to <b><i><u>forEach</u></i></b>:
+        </div>
+        <div class="column-description">
+            on the forEach in the parameters, we can also include a second parameter which is for the index.
+        </div>
+        <div class="container-syntax-example-console syntax-color">
+            <div class="title-syntax-example-console">
+                Syntax
+            </div>
+            <div class="inner-code">
+                let myArray = [1, 2, 3];<br/><br/>
+                let anotherArray = [];
+                
+                for (let i = 0; i < myArray.length; i++){<br/>
+                    anotherArray.push(myArray[i]);<br/>
+                   };<br/>
+                   <br/>
+                   <div><b><u>OR</u></b></div><br/>
+                   <br/>                
+                   myArray.forEach ((item) => {<br/>
+                       anotherArray.push(item);<br/>
+                   };
+            </div>
+        </div>
+        <div class="container-syntax-example-console example-color">
+            <div class="title-syntax-example-console">
+                Example
+            </div>
+            <div class="inner-code">
+                let Grades = [10, 8, 3];<br/><br/>
+                let anotherArray = [];<br/>
+                <br/>
+                for (let i = 0; i < Grades.length; i++){<br/>
+                    anotherArray.push(Grades[i]);<br/>
+                   };<br/>
+                   <br/>
+                   <div><b><u>OR</u></b></div><br/>
+                   <br/>                
+                   Grades.forEach ((item) => {<br/>
+                       anotherArray.push(item);<br/>
+                   };<br/>
+                    <br/>
+                   console.log(anotherArray);
+            </div>
+        </div>
+        <div class="container-syntax-example-console console-color">
+            <div class="title-syntax-example-console">
+                Console
+            </div>
+            <div class="inner-code">
+                (6) [10, 8, 3, 10, 8, 3]
+            </div>
+        </div>
+    </div>
+    <div class="container-column column-halves">
+        <div class="column-title left-align">
+            Iterating through Multidimensional Array using <b><i><u>forEach</u></i></b> vs <b><i><u>for</u></i></b>:
+        </div>
+        <div class="column-description">
+
+        </div>
+        <div class="container-syntax-example-console syntax-color">
+            <div class="title-syntax-example-console">
+                Syntax
+            </div>
+            <div class="inner-code">
+                let myArray = [
+                [1, 2, 3],
+                [11,22,33],
+                [101, 102, 103]
+                ];<br/><br/>
+                
+                for (let i = 0; i< myArray.length; i++){<br/>
+                    for (let k = 0; k < myArray[i].lenght; k++){<br/>
+                        console.log(myArray[i][k]);<br/>
+                    }<br/>
+                };<br/>
+                <br/>
+                //element will be each row of the array<br/>
+                myArray.forEach(<br/>
+                    function(elementLvl1){<br/>
+                    elementLvl1.forEach(<br/>
+                        function(elementLvl2){<br/>
+                        console.log(elementLvl2);<br/>
+                    });<br/>
+                });
+            </div>
+        </div>
+        <div class="container-syntax-example-console example-color">
+            <div class="title-syntax-example-console">
+                Example
+            </div>
+            <div class="inner-code">
+                let Students = [
+                    ["Jane", 15, "Math"],
+                    ["Sawyer", 12, "Art"],
+                    ["Pablo", 19, ['Biography', 'Chemistry', 'Music']]
+                ];<br/>
+                <br/>
+                for (let i = 0; i< Students.length; i++){<br/>
+                    for (let k = 0; k < Students[i].length; k++){<br/>
+                        console.log(Students[i][k]);<br/>
+                            <br/>
+                    }console.log('~~~~~~~');<br/>
+                };<br/>
+                <br/>
+                Students.forEach(function(student){<br/>
+                    student.forEach(function(details){<br/>
+                        console.log(details);<br/>
+                    });console.log('~~~~~~~')<br/>
+                });
+            </div>
+        </div>
+        <div class="container-syntax-example-console console-color">
+            <div class="title-syntax-example-console">
+                Console
+            </div>
+            <div class="inner-code">
+                Jane<br/>
+                15<br/>
+                Math<br/>
+                ~~~~~~~<br/>
+                Sawyer<br/>
+                12<br/>
+                Art<br/>
+                ~~~~~~~<br/>
+                Pablo<br/>
+                19<br/>
+                (3) ['Biography', 'Chemistry', 'Music']
+            </div>
+        </div>
+</div>
+</div>
 
 <!-- --------------------------------------------- -->
     <script src="../loops/loops.js"></script>
