@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600;700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+            rel="stylesheet"
+        />
+        <title>Array Methods</title>
+    </head>
+    <body>
+        <!-- NAVIGATION MENU - SIDE OPEN -->
+        <header>
+            <div id="title-bar-backing"></div>
+            <h1 id="title-bar">
+                <span
+                    id="nav-hamburger"
+                    style="cursor: pointer"
+                    onclick="openNav()"
+                    >&#9776;</span
+                >
+                <span id="page-title">Array Methods</span>
+            </h1>
+
+            <div id="mySidenav" class="sidenav">
+                <a
+                    href="javascript:void(0)"
+                    class="closebtn"
+                    onclick="closeNav()"
+                    >&times;</a
+                >
+                <nav id="nav"></nav>
+                <div class="space-block"></div>
+            </div>
+        </header>
+        <main>
+            <article>
+                <section>
+                    <h2 class="lvl2" id="concat">Concat ()</h2>
+                    <ul>
+                        <li>returns arr1 concatenated to arr2.</li>
+                    </ul>
+                    <div class="outer-table">
+                        <div class="head-row-full">
+                            <div class="cell-header">Code</div>
+                        </div>
+                        <div class="body-row-full">
+                            <div class="cells">
+                                <pre><code>let arr1 = [31, 74, 11, 8, 25, 11];
+let arr2 = ['p', 'a', 'g', 'u', 'a'];
+
+arr1.concat();
+
+<span class="output">//[31, 74, 11, 8, 25, 11, 'p', 'a', 'g', 'u', 'a']</span>
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <br /><br />
+                <section>
+                    <h2 class="lvl2" id="join">join( )</h2>
+                    <ul>
+                        <li>
+                            returns string by using delimiter between elements
+                            of the array.
+                        </li>
+                    </ul>
+                    <div class="outer-table">
+                        <div class="head-row-full">
+                            <div class="cell-header">Code</div>
+                        </div>
+                        <div class="body-row-full">
+                            <div class="cells">
+                                <pre><code>let arr1 = [31, 74, 11, 8, 25, 11];
+let arr2 = ['p', 'a', 'g', 'u', 'a'];
+
+arr1.join("!")
+<span class="output">//31!74!11!8!25!11</span></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <br /><br />
+
+                <section>
+                    <h2 class="lvl2" id="length">length( )</h2>
+                    <ul>
+                        <li>returns number of indexes in the array.</li>
+                    </ul>
+                    <div class="outer-table">
+                        <div class="head-row-full">
+                            <div class="cell-header">Code</div>
+                        </div>
+                        <div class="body-row-full">
+                            <div class="cells">
+                                <pre><code>let arr1 = [31, 74, 11, 8, 25, 11];
+let arr2 = ['p', 'a', 'g', 'u', 'a'];
+
+arr1.length()
+<span class="output">//5</span></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <br /><br />
+
+                <section>
+                    <h2 class="lvl2" id="get-index-of">getindexOf( )</h2>
+                    <ul>
+                        <li>returns the index of "g".</li>
+                    </ul>
+                    <div class="outer-table">
+                        <div class="head-row-full">
+                            <div class="cell-header">Code</div>
+                        </div>
+                        <div class="body-row-full">
+                            <div class="cells">
+                                <pre><code>let arr1 = [31, 74, 11, 8, 25, 11];
+let arr2 = ['p', 'a', 'g', 'u', 'a'];
+
+arr2.getindexOf("g")
+<span class="output">//2</span></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <br /><br />
+
+                <section>
+                    <h2 class="lvl2" id="last-index-of">lastIndexOf( )</h2>
+                    <ul>
+                        <li>returns the last index of "a".</li>
+                    </ul>
+                    <div class="outer-table">
+                        <div class="head-row-full">
+                            <div class="cell-header">Code</div>
+                        </div>
+                        <div class="body-row-full">
+                            <div class="cells">
+                                <pre><code>let arr1 = [31, 74, 11, 8, 25, 11];
+let arr2 = ['p', 'a', 'g', 'u', 'a'];
+
+arr1.lastIndexOf("a")
+<span class="output">// 4</span></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <br /><br />
+
+                <section>
+                    <h2 class="lvl2" id="sort">sort( )</h2>
+                    <ul>
+                        <li>returns array sorted alphabetically.</li>
+                    </ul>
+                    <div class="outer-table">
+                        <div class="head-row-full">
+                            <div class="cell-header">Code</div>
+                        </div>
+                        <div class="body-row-full">
+                            <div class="cells">
+                                <pre><code>let arr1 = [31, 74, 11, 8, 25, 11];
+let arr2 = ['p', 'a', 'g', 'u', 'a'];
+
+arr1.sort()
+<span class="output">// [11, 11, 25, 31, 74, 8] because <b><i>1</i></b>1 > 8</span>
+
+arr2.sort()
+<span class="output">// ['a', 'a', 'g', 'p', 'u']</span></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                    <br /><br />
+                    <section>
+                        <h3 class="lvl3" id="sort-numerically">
+                            To Sort Numerically
+                        </h3>
+                        <div class="outer-table">
+                            <div class="head-row-full">
+                                <div class="cell-header">Code</div>
+                            </div>
+                            <div class="body-row-full">
+                                <div class="cells">
+                                    <pre><code>let arr1 = [31, 74, 11, 8, 25, 11];
+let arr2 = ['p', 'a', 'g', 'u', 'a'];
+
+arr1.sort(function (a, b) {
+    return a - b;
+});
+
+<span class="output">// [8, 11, 11, 25, 31, 74]</span>
+</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <br /><br />
+                    <section>
+                        <h3
+                            class="lvl3"
+                            id="sort-numerically-function-expression"
+                        >
+                            To Sort Numerically using Function Expression
+                        </h3>
+                        <div class="outer-table">
+                            <div class="head-row-full">
+                                <div class="cell-header">Code</div>
+                            </div>
+                            <div class="body-row-full">
+                                <div class="cells">
+                                    <pre><code>let arr1 = [31, 74, 11, 8, 25, 11];
+let arr2 = ['p', 'a', 'g', 'u', 'a'];
+
+<span class="output">// </span>
+</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <br /><br />
+                    <section>
+                        <h3 class="lvl3" id="sort-numerically-arrow-function">
+                            To Sort Numerically using Arrow Function
+                        </h3>
+                        <div class="outer-table">
+                            <div class="head-row-full">
+                                <div class="cell-header">Code</div>
+                            </div>
+                            <div class="body-row-full">
+                                <div class="cells">
+                                    <pre><code>let arr1 = [31, 74, 11, 8, 25, 11];
+let arr2 = ['p', 'a', 'g', 'u', 'a'];
+
+arr1.sort((a, b) => b - a);
+<span class="output">// [8, 11, 11, 25, 31, 74]</span>
+</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <br /><br />
+
+                <section>
+                    <h2 class="lvl2" id=""></h2>
+                    <ul>
+                        <li></li>
+                    </ul>
+                    <div class="outer-table">
+                        <div class="head-row-full">
+                            <div class="cell-header">Code</div>
+                        </div>
+                        <div class="body-row-full">
+                            <div class="cells">
+                                <pre><code>let arr1 = [31, 74, 11, 8, 25, 11];
+let arr2 = ['p', 'a', 'g', 'u', 'a'];
+
+
+
+<span class="output">// </span></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <br /><br />
+                <section>
+                    <h2 class="lvl2" id="slice">slice( )</h2>
+                    <ul>
+                        <li>
+                            returns sliced portion of the array including the
+                            first index and upto excluding the second index.
+                        </li>
+                    </ul>
+                    <div class="outer-table">
+                        <div class="head-row-full">
+                            <div class="cell-header">Code</div>
+                        </div>
+                        <div class="body-row-full">
+                            <div class="cells">
+                                <pre><code>let arr1 = [31, 74, 11, 8, 25, 11];
+let arr2 = ['p', 'a', 'g', 'u', 'a'];
+
+arr2.slice(0, 2)
+
+<span class="output">// ['p', 'a']</span></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <br /><br />
+                <section>
+                    <h2 class="lvl2" id="pop">pop( )</h2>
+                    <ul>
+                        <li>
+                            returns the string with the last element removed.
+                        </li>
+                    </ul>
+                    <div class="outer-table">
+                        <div class="head-row-full">
+                            <div class="cell-header">Code</div>
+                        </div>
+                        <div class="body-row-full">
+                            <div class="cells">
+                                <pre><code>let arr1 = [31, 74, 11, 8, 25, 11];
+let arr2 = ['p', 'a', 'g', 'u', 'a'];
+
+arr1.pop()
+
+<span class="output">// [31, 74, 11, 8, 25]</span></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <br /><br />
+
+                <section>
+                    <h2 class="lvl2" id="push">push( )</h2>
+                    <ul>
+                        <li>
+                            returns array with new element appended to end of
+                            array.
+                        </li>
+                    </ul>
+                    <div class="outer-table">
+                        <div class="head-row-full">
+                            <div class="cell-header">Code</div>
+                        </div>
+                        <div class="body-row-full">
+                            <div class="cells">
+                                <pre><code>let arr1 = [31, 74, 11, 8, 25, 11];
+let arr2 = ['p', 'a', 'g', 'u', 'a'];
+
+arr1.push(5)
+
+<span class="output">// [31, 74, 11, 8, 25, 11, 5]</span></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <br /><br />
+
+                <section>
+                    <h2 class="lvl2" id="shift">shift( )</h2>
+                    <ul>
+                        <li>returns array after removing first element.</li>
+                    </ul>
+                    <div class="outer-table">
+                        <div class="head-row-full">
+                            <div class="cell-header">Code</div>
+                        </div>
+                        <div class="body-row-full">
+                            <div class="cells">
+                                <pre><code>let arr1 = [31, 74, 11, 8, 25, 11];
+let arr2 = ['p', 'a', 'g', 'u', 'a'];
+
+arr1.shift()
+
+<span class="output">// [74, 11, 8, 25, 11]</span></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <br /><br />
+
+                <section>
+                    <h2 class="lvl2" id="unshift">unshift( )</h2>
+                    <ul>
+                        <li>
+                            returns array with new element appended to right of
+                            array.
+                        </li>
+                    </ul>
+                    <div class="outer-table">
+                        <div class="head-row-full">
+                            <div class="cell-header">Code</div>
+                        </div>
+                        <div class="body-row-full">
+                            <div class="cells">
+                                <pre><code>let arr1 = [31, 74, 11, 8, 25, 11];
+let arr2 = ['p', 'a', 'g', 'u', 'a'];
+
+arr1.unshift(5)
+
+<span class="output">// [5, 31, 74, 11, 8, 25, 11]</span></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <br /><br />
+
+                <section>
+                    <h2 class="lvl2" id="to-string">toString( )</h2>
+                    <ul>
+                        <li>
+                            returns string after converting array to string.
+                        </li>
+                    </ul>
+                    <div class="outer-table">
+                        <div class="head-row-full">
+                            <div class="cell-header">Code</div>
+                        </div>
+                        <div class="body-row-full">
+                            <div class="cells">
+                                <pre><code>let arr1 = [31, 74, 11, 8, 25, 11];
+let arr2 = ['p', 'a', 'g', 'u', 'a'];
+
+arr1.toString()
+
+<span class="output">// 31,74,11,8,25,11</span></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <br /><br />
+
+                <section>
+                    <h2 class="lvl2" id="reverse">reverse( )</h2>
+                    <ul>
+                        <li>returns array in reverse.</li>
+                    </ul>
+                    <div class="outer-table">
+                        <div class="head-row-full">
+                            <div class="cell-header">Code</div>
+                        </div>
+                        <div class="body-row-full">
+                            <div class="cells">
+                                <pre><code>let arr1 = [31, 74, 11, 8, 25, 11];
+let arr2 = ['p', 'a', 'g', 'u', 'a'];
+
+arr1.reverse()
+arr2.reverse()
+<span class="output">// [11, 25, 8, 11, 74, 31]
+
+// ['a', 'u', 'g', 'a', 'p']</span></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <br /><br />
+
+                <section>
+                    <h2 class="lvl2" id="splice">splice( )</h2>
+                    <ul>
+                        <li>
+                            returns array including first index, and total
+                            number of index positions to remove.
+                        </li>
+                    </ul>
+                    <div class="outer-table">
+                        <div class="head-row-full">
+                            <div class="cell-header">Code</div>
+                        </div>
+                        <div class="body-row-full">
+                            <div class="cells">
+                                <pre><code>let arr1 = [31, 74, 11, 8, 25, 11];
+let arr2 = ['p', 'a', 'g', 'u', 'a'];
+
+arr1.splice(1, 3)
+arr2.splice(1, 3)
+<span class="output">// [74, 11, 8]
+// ['a', 'g', 'u']</span></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <br /><br />
+
+                <section>
+                    <h2 class="lvl2" id="is-array">Array.isArray( )</h2>
+                    <ul>
+                        <li>returns boolean if argument is an array.</li>
+                    </ul>
+                    <div class="outer-table">
+                        <div class="head-row-full">
+                            <div class="cell-header">Code</div>
+                        </div>
+                        <div class="body-row-full">
+                            <div class="cells">
+                                <pre><code>let arr1 = [31, 74, 11, 8, 25, 11];
+let arr2 = ['p', 'a', 'g', 'u', 'a'];
+
+>Array.isArray(arr1)
+
+<span class="output">// true</span></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <br /><br />
+
+                <section>
+                    <h2 class="lvl2" id="value-of">valueOf( )</h2>
+                    <ul>
+                        <li>returns primitive value.</li>
+                    </ul>
+                    <div class="outer-table">
+                        <div class="head-row-full">
+                            <div class="cell-header">Code</div>
+                        </div>
+                        <div class="body-row-full">
+                            <div class="cells">
+                                <pre><code>let arr1 = [31, 74, 11, 8, 25, 11];
+let arr2 = ['p', 'a', 'g', 'u', 'a'];
+
+>arr1.valueOf()
+
+<span class="output">// </span></code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </main>
+        <br /><br /><br /><br />
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="footer-column">
+                        <a href="../index.html">Homepage</a>
+                    </div>
+                </div>
+                <hr class="revert" />
+                <div class="row">
+                    <div class="footer-column">
+                        <h3 class="revert">HTML</h3>
+
+                        <br /><a href="./arrayMethods/index.html"
+                            >Array Methods</a
+                        >
+                        <br /><a href="./dateMethods/index.html"
+                            >Date Methods</a
+                        >
+                        <br /><a href="./Debugging/index.html">Debugging</a>
+                        <br /><a href="./EventListeners/index.html"
+                            >Event Listeners</a
+                        >
+                        <br /><a href="./Functions/index.html">Functions</a>
+                        <br /><a href="./if/index.html">If</a> <br /><a
+                            href="./JS/DOM/index.html"
+                            >Javascript</a
+                        >
+                        <br /><a href="./loops/index.html">Loops</a> <br /><a
+                            href="./mathNumberMethods/index.html"
+                            >Math Number Methods</a
+                        >
+                        <br /><a href="./objects/index.html">Objects</a>
+                        <br /><a href="./Other/index.html">Other</a> <br /><a
+                            href="./stringMethods/index.html"
+                            >String Methods</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="../nav-menu.js"></script>
+    </body>
+</html>
+
+<!-- section>h2.lvl2#+ul>li^div.outer-table>div.head-row-full>div.cell-header{Code}^div.body-row-full>div.cells>pre>code>{let arr1 = [31, 74, 11, 8, 25, 11];}{let arr2 = ['p', 'a', 'g', 'u', 'a'];}{}span.output -->
+<!-- <section>
+    <h2 class="lvl2" id=""></h2>
+    <ul>
+        <li></li>
+    </ul>
+    <div class="outer-table">
+        <div class="head-row-full">
+            <div class="cell-header">Code</div>
+        </div>
+        <div class="body-row-full">
+            <div class="cells">
+                <pre>
+                    <code>
+                        let arr1 = [31, 74, 11, 8, 25, 11];
+                        let arr2 = ['p', 'a', 'g', 'u', 'a'];
+                        <span class="output">// </span></code>
+                </pre>
+            </div>
+        </div>
+    </div>
+</section> -->
