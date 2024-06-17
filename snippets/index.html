@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="prism2.css" />
+        <title>Code Snippets - Javascript</title>
+    </head>
+    <body class="lato-regular">
+        <h1>Javascript Snippets</h1>
+
+        <div id="js1">
+            <h2>Javascript Basics</h2>
+            <h3>Printing to Console</h3>
+            <ul>
+                <pre><code>console.log()</code></pre>
+            </ul>
+            <h3>Comments</h3>
+            <ul>
+                <li class="title">Single Line Comment</li>
+
+                <pre><code>// This is a comment</code></pre>
+                <li class="title">Multiline Comment</li>
+                <pre><code>/*
+This
+is
+a
+multiline
+comment
+*/</code></pre>
+            </ul>
+            <h2>DOM</h2>
+            Sample HTML Code
+            <pre>
+<code>&lt;body&gt;
+    &lt;div id="first-section"&gt;
+        &lt;h1&gt;This will be the Main title&lt;/h1&gt;
+        &lt;p&gt;uuuuu&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="container"&gt;
+        A Container Class
+        &lt;p&gt;Para 1&lt;/p&gt;
+        &lt;p&gt;Para 2&lt;/p&gt;
+        &lt;p id="P1"&gt;Para 3&lt;/p>
+        &lt;p class="par"&gt;Para 4&lt;/p&gt;
+        &lt;p class="par"&gt;Para 5&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="container"&gt;Lorem ipsum dolor sit amet.&lt;/div&gt;
+    &lt;div&gt;
+        &lt;ul&gt;
+            This is an unordered list
+            &lt;li&gt;Item 1&lt;/li&gt;
+                &lt;ul&gt;
+                    &lt;li&gt;x&lt;/li&gt;
+                    &lt;li&gt;y&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;li&gt;Item 2&lt;/li&gt;
+            &lt;li&gt;Item 3&lt;/li&gt;
+            &lt;li&gt;Item 4&lt;/li&gt;
+            &lt;li&gt;Item 5&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/body&gt;</code></pre>
+            <ul>
+                <h3>Finding HTML Elements</h3>
+                <ul>
+                    <li>
+                        If a Collection or Node List is returned:
+                        <br />(Node List - Items can only be accessed by Index
+                        Number) <br />(Collection - Items can be accessed by
+                        name, id, or index number)
+                        <ul>
+                            <li>
+                                You must iterate throught the list to change
+                                anything.
+                            </li>
+                            <li>
+                                When a parent element is changed it collapses
+                                all child elements, and changes the parent
+                                element.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li>.getElementById = Always Unique will return 1 item.</li>
+                    <li>
+                        .getElementsByTagName = Returns an HTML Collection (a
+                        live list)
+                    </li>
+                    <li>
+                        .getElementsByClassName() = Returns an HTML Collection
+                        (a live list)
+                    </li>
+
+                    <pre><code>let _id = document.getElementById("first-section");
+console.log(_id)</code></pre>
+                    <pre><code class="output"># Output:
+&lt;div id="first-section"&gt;
+            &lt;h1&gt;This will be the main title&lt;/h1&gt;
+        &lt;/div&gt;</code></pre>
+
+                    <pre>
+<code>let _tagNameList = document.getElementsByTagName("ul");
+    console.log(_tagNameList);</code></pre>
+                    <pre><code class="output"># Output :
+HTMLCollection [ul]</code></pre>
+
+                    <pre>
+<code>let _classNameList = document.getElementsByClassName("container");
+console.log(_classNameList);</code></pre>
+                    <pre><code class="output"># Output:
+HTMLCollection(2) [div.container, div.container]</code></pre>
+                </ul>
+                <h3>Changing HTML Elements</h3>
+                <ul>
+                    <li>element.innerHTML = new html content</li>
+                    <pre>
+<code>let _id = document.getElementById("first-section");
+_id.innerHTML = "Hello";
+console.log(_id.innerHTML);
+
+let _tagNameList = document.getElementsByTagName("p");
+for (let i = 0; i &lt; _tagNameList.length; i++) {
+    let e = _tagNameList[i];
+    e.innerHTML = "Hola";
+    console.log(e.innerHTML);
+}
+
+let _classList = document.getElementsByClassName("container");
+for (let i = 0; i &lt; _classList.length; i++) {
+    let e = _classList[i];
+    e.innerHTML = "Hi";
+    console.log(e.innerHTML);
+}</code></pre>
+                    <pre><code class="output"># Output:
+Hello
+5 Hola
+Hi</code></pre>
+                </ul>
+                <h3>Writing Directly to the HTML Element</h3>
+                <ul>
+                    <pre>
+<code>document.write("elephant");</code></pre>
+                </ul>
+                <h3>Changing the Value of an Attribute</h3>
+                <ul>
+                    <li>Changes the value of the attribute.</li>
+                    <li>
+                        Changing a style attribute:
+                        <ul>
+                            <li>
+                                The "p" value has a background color of green,
+                                set by the css, we will change it to blue using
+                                JS.
+                            </li>
+                            <pre>
+<code>let paraList = document.getElementsByTagName("p");
+for (let i = 0; i < paraList.length; i++) {
+    const p = paraList[i];
+    p.style.backgroundColor = "blue";
+}</code></pre>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>Output</h3>
+                <ul>
+                    <li class="sub-title">Writing into an HTML Element</li>
+                </ul>
+                <h3>Formatting</h3>
+
+                <ul>
+                    <li class="sub-title">String Formatting</li>
+                    <ul>
+                        <li class="sub-sub-title">Concatenation</li>
+                        <pre>
+<code>console.log("Jump" + "up");</code></pre>
+                        <pre><code class="output"># Output:
+Jumpup</code></pre>
+                        <li class="sub-sub-title">Template Literal</li>
+                        <pre>
+<code>let f_name = "Lilly";
+let l_name = "Potter";
+let age = 32;
+console.log(`This person is: ${f_name} ${l_name}, they are ${age} years old.`);</code></pre>
+                        <pre><code class="output"># Output: 
+This person is: Lilly Potter, they are 32 years old.</code></pre>
+                    </ul>
+                    <li class="sub-title">Number Formatting</li>
+                    <ul>
+                        <li class="sub-sub-title">Fixed Decimal Length</li>
+                        <pre>
+<code>let num1 = 1.56897;
+console.log(num1.toFixed(2));
+console.log(Math.trunc(num1 * 100) / 100);</code></pre>
+                        <pre><code class="output"># Output:
+1.57
+
+1.56</code></pre>
+                    </ul>
+                </ul>
+                <h3>Converting to Other data types</h3>
+                <ul>
+                    <li>String/Float to Int = parseInt()</li>
+                    <li>String/Int to Float = parseFloat()</li>
+                    <li>Int/Float to String = String()</li>
+                    <pre>
+<code>let num1 = 1.56897;
+let s1 = "3.000005";
+console.log(String(num1));
+console.log(parseInt(num1));
+console.log(parseFloat(s1));
+console.log(parseInt(s1));</code></pre>
+                    <pre><code class="output"># Output :
+1.56897
+1
+3.000005
+3</code></pre>
+                </ul>
+                <h3>Conditionals</h3>
+                <ul>
+                    <li>if / else</li>
+                    <pre>
+<code>let a = 5;
+
+if (a &gt; 0) {
+    console.log("number is positive");
+} else {
+    console.log("Number is negative");
+}</code></pre>
+                    <li>else if</li>
+                    <pre>
+<code>let a = 5;
+
+if (a &gt; 0) {
+    console.log("number is positive");
+} else if (a &lt; 0) {
+    console.log("Number is negative");
+} else {
+    console.log("Number is zero");
+}</code></pre>
+                    <li>Switch</li>
+                    <ul>
+                        <li>
+                            If...Else if...Else Statements are better and faster
+                        </li>
+                    </ul>
+                    <pre>
+<code>let a = "blue";
+
+switch (a) {
+    case "red":
+        console.log("This is  red");
+        break;
+    case "blue":
+        console.log("This is blue");
+        break;
+
+    default:
+        console.log("not a valid color");
+        break;
+}</code></pre>
+                    <li>Ternary Operator</li>
+                    <ul>
+                        <li>
+                            The ternary operator is a conditional operator and
+                            can be used as a one-line if-else statement. The
+                            syntax is: condition ? expressionIfTrue :
+                            expressionIfFalse.
+                        </li>
+                        <li>
+                            Here is an example of returning a value using an
+                            if-else statement and a refactored example using a
+                            ternary operator:
+                        </li>
+                        <ul>
+                            <li class="sub-title">If-Else Statement</li>
+                            <pre><code>// if-else statement
+if (score > 0) {
+    return score
+} else {
+    return default_score    
+}</code></pre>
+                            <li class="sub-title">Ternary Operator</li>
+                            <pre><code>return score > 0 ? score : default_score</code></pre>
+                        </ul>
+                    </ul>
+                </ul>
+                <h3>Strings</h3>
+                <ul>
+                    <li class="title">Declaring a string</li>
+                    <ul>
+                        <li class="sub-title">Declaring an EMPTY string</li>
+                        <pre><code>let s = "";</code></pre>
+                        <li class="sub-title">
+                            Declaring and Initializing a string
+                        </li>
+                        <pre><code>let cat = "whiskers";</code></pre>
+                    </ul>
+                    <li class="title">String Methods</li>
+                    <ul>
+                        <li class="sub-title">Repeating</li>
+                        <pre><code>let color = "red";
+console.log(color.repeat(3));       //redredred</code></pre>
+                    </ul>
+                </ul>
+                <h3>Arrays</h3>
+                <ul>
+                    It is common practice to declare arrays using const keyword.
+                </ul>
+                <ul>
+                    <li class="sub-title">Creating an Array</li>
+
+                    <pre>
+<code>const colors = ["red", "green", "blue"];
+</code></pre>
+                    <li class="sub-title">Accessing an Array</li>
+                    <pre>
+<code>const colors = ["red", "green", "blue"];
+let red = colors[0];</code></pre>
+                    <li class="sub-title">Changing an Element in an Array</li>
+                    <pre>
+<code>const colors = ["red", "green", "blue"];
+colors[1] = "purple";
+console.log(colors);</code></pre>
+                    <pre><code class="output"># Output:
+    (3) ['red', 'purple', 'blue']</code></pre>
+                    <li class="sub-title">Converting an Array to a String</li>
+                    <ul>
+                        <li>Does not allow specifying the seperator</li>
+                    </ul>
+                    <pre>
+<code>const colors = ["red", "green", "blue"];
+console.log(colors.toString());</code></pre>
+                    <pre><code class="output"># Output:
+red,green,blue</code></pre>
+                    <li class="sub-title">Adding elements to an Array</li>
+                    <pre>
+<code>const colors = ["red", "green", "blue"];
+colors.push("yellow");
+console.log(colors);</code></pre>
+                    <pre><code class="output"># Output:
+(4) ['red', 'green', 'blue', 'yellow']</code></pre>
+                    <li class="sub-title">Array Methods</li>
+                    <ul>
+                        <li class="sub-sub-title">
+                            .join() = Joining an Array into a String, specifying
+                            the seperator
+                        </li>
+                        <pre>
+<code>const colors = ["red", "green", "blue"];
+let x = colors.join(" * ");
+console.log(x);</code></pre>
+                        <pre><code class="output"># Output:
+red * green * blue</code></pre>
+                        <li class="sub-sub-title">
+                            pop() = Removes last element from an array
+                        </li>
+                        <pre>
+<code>const colors = ["red", "green", "blue"];
+colors.pop();
+console.log(colors);</code></pre>
+                        <pre><code class="output"># Output:
+(2) ['red', 'green']</code></pre>
+                        <li class="sub-sub-title">
+                            push() = Adds element(s) to the end of an Array
+                        </li>
+                        <pre>
+<code>const colors = ["red", "green", "blue"];
+colors.push("yellow", "purple");
+console.log(colors);</code></pre>
+                        <pre><code class="output"># Output:
+(5) ['red', 'green', 'blue', 'yellow', 'purple']</code></pre>
+                        <li class="sub-sub-title">
+                            shift() = Removing the first element of an Array
+                        </li>
+                        <pre>
+<code>const colors = ["red", "green", "blue"];
+colors.shift();
+console.log(colors);</code></pre>
+                        <pre><code class="output"># Output: 
+(2) ['green', 'blue']</code></pre>
+                        <li class="sub-sub-title">
+                            unshift() = Adds element to the beginning of an
+                            Array
+                        </li>
+                        <pre>
+<code>const colors = ["red", "green", "blue"];
+colors.unshift("orange", "aqua");
+console.log(colors);</code></pre>
+                        <pre><code class="output"># Output :
+(5) ['orange', 'aqua', 'red', 'green', 'blue']</code></pre>
+                        <li class="sub-sub-title">concat() = Merging Arrays</li>
+                        <pre>
+<code>const colors = ["red", "green", "blue"];
+const shapes = ["square", "circle", "triangle"];
+const concArray = colors.concat(shapes);
+console.log(concArray);</code></pre>
+                        <pre><code class="output"># Output:
+(6) ['red', 'green', 'blue', 'square', 'circle', 'triangle']</code></pre>
+                        <li class="sub-sub-title">
+                            splice() = Adding/ Removing items to/from an array
+                            at a specific index
+                        </li>
+                        <ul>
+                            <li>The first number is the splice index</li>
+                            <li>
+                                The second number is how many elements to delete
+                            </li>
+                        </ul>
+                        <pre>
+<code>// Using Splice() to add
+const colors = ["red", "green", "blue"];
+colors.splice(2, 0, "violet", "fuschia");
+console.log(colors);
+
+// Using Splice() to Delete
+colors.splice(0, 2);
+console.log(colors);</code></pre>
+                        <li class="sub-sub-title">
+                            slice() = slicing out part of an array into a new
+                            array
+                        </li>
+                        <ul>
+                            <li>
+                                If only one index is given, the array will be
+                                sliced, from that index to the end, excluding
+                                that index
+                            </li>
+                        </ul>
+                        <pre>
+<code>const colors = ["red", "green", "blue", "yellow", "orange"];
+let colorsPart1 = colors.slice(0, 2);
+let colorsPart2 = colors.slice(2);
+let colorsPart3 = colors.slice(1);
+console.log(colorsPart1);
+console.log(colorsPart2);
+console.log(colorsPart3);</code></pre>
+                        <pre><code class="output"># Output:
+(2) ['red', 'green']
+(3) ['blue', 'yellow', 'orange']
+(4) ['green', 'blue', 'yellow', 'orange']</code></pre>
+                        <li class="sub-sub-title">
+                            indexOf() = searches an Array for an element and
+                            returns the first index (starting from 0)
+                        </li>
+                        <pre>
+<code>const colors = ["red", "green", "blue", "yellow", "orange"];
+console.log(colors.indexOf("blue"));</code></pre>
+                        <pre><code class="output"># Output:
+2</code></pre>
+                        <li class="sub-sub-title">
+                            lastIndexOf() = indexOf() = searches an Array for an
+                            element and returns the last index (starting
+                            backwards from length of array)
+                        </li>
+                        <pre>
+<code>const colors = ["red", "green", "blue", "yellow", "orange", "blue", "pink"];
+console.log(colors.lastIndexOf("blue"));</code></pre>
+                        <pre><code class="output"># Output :
+5</code></pre>
+                    </ul>
+                </ul>
+            </ul>
+            <h3>Loops</h3>
+            <ul>
+                <li class="title">Looping in a range</li>
+                <ul>
+                    <li class="sub-sub-title">For Loop</li>
+                    <pre>
+<code>for (let i = 0; i &lt; 5; i++) {
+    console.log(i);
+}</code></pre>
+                    <li class="sub-sub-title">While Loop</li>
+                    <ul>
+                        <li>Basic Syntax</li>
+                        <pre><code>while (condition) {
+    logic;
+}</code></pre>
+                        <li>Example:</li>
+                        <pre>
+<code>i = 0;
+while (i &lt; 5) {
+    console.log(i);
+    i++;
+}</code></pre>
+                    </ul>
+                    <li class="sub-sub-title">Do - While Loop</li>
+                    <pre>
+<code>i = 0;
+do {
+    console.log(i);
+    i++;
+} while (i &lt; 5);</code></pre>
+                    <li class="sub-sub-title">For of Loop</li>
+                    <ul>
+                        <li>
+                            A for...of loop, which iterates over each item in an
+                            iterable object and temporarily assigns it to a
+                            variable.
+                        </li>
+                        <pre><code>//The syntax for a for...of loop looks like:
+for (const value of iterable) {
+
+}</code></pre>
+                    </ul>
+                    <pre>
+<code>numArray = [1, 2, 3, 4, 5];
+for (const i of numArray) {
+    console.log(i);
+}</code></pre>
+                </ul>
+            </ul>
+
+            <h3>Functions</h3>
+            <ul>
+                <li class="title">Basic Function</li>
+                <ul>
+                    <li class="sub-title">Function Syntax</li>
+                    <pre><code>function name(parameter) {
+
+}</code></pre>
+                    <li class="sub-title">Declaring a function</li>
+                    <pre>
+<code>function greet(nom) {
+    console.log("Hello " + nom);
+}</code></pre>
+                    <li class="title">Calling a function</li>
+                    <pre><code>greet ("Jane");
+
+function add(a, b) {
+    return a + b;
+}
+let f = add(3, 2);
+console.log(f);</code></pre>
+                </ul>
+                <li>Arrow Function</li>
+                <pre>
+<code>let arrowGreet = (nom) => console.log("Hello " + nom);
+arrowGreet("Elia");
+
+let arrowAdd = (a, b) => a + b;
+let j = arrowAdd(5, 10);
+console.log(j);</code></pre>
+                <li>Nested Functions</li>
+                <pre>
+<code>function outerFunction(outerVariable) {
+    return function innerFunction(innerVariable) {
+        console.log('Outer Variable: ' + outerVariable)
+        console.log('Inner Variabel: ' + innerVariable)
+    }
+}
+
+const newFunction = outerFunction('outside')
+newFunction ('inside')</code></pre>
+
+                <pre>
+<code>function makeMultiplier(num1) {
+    return function multiply(num2) {
+        console.log(
+            "multiply num1 by num2. num1 = " + num1 + " num2 =  " + num2
+        );
+        console.log("Result is: " + num1 * num2);
+    };
+}
+
+const newFunction = makeMultiplier(3);
+newFunction(4);</code></pre>
+            </ul>
+            <h3>Objects</h3>
+            <ul>
+                <p>
+                    Objects are non primitive data types that store key-value
+                    pairs. Non primitive data types are mutable data types that
+                    are not undefined, null, boolean, number, string, or symbol.
+                    Mutable means that the data can be changed after it is
+                    created. Here is the basic syntax for an object:
+                </p>
+                <pre><code>{
+    key: value
+}</code></pre>
+                <p>
+                    Objects are similar to arrays, except that instead of using
+                    indexes to access and modify their data, you access the data
+                    in objects through properties. Properties consist of a key
+                    and a value. The key is the name of the property, and the
+                    value is the data stored in the property. Here is an example
+                    of an object with a single property:
+                </p>
+                <pre><code>const obj = {
+    name: "Quincy Larson"
+};</code></pre>
+                <p>
+                    If the property name (key) of an object has a space in it,
+                    you will need to use single or double quotes around the
+                    name. Here is an example of an object with a property name
+                    that has a space:
+                </p>
+                <pre><code>const spaceObj = {
+    "Space Name": "Kirk",
+};</code></pre>
+                <p>
+                    If you tried to write a key without the quotes, it would
+                    throw an error
+                </p>
+
+                <li class="sub-title">Accessing a property</li>
+                <ul>
+                    <li class="sub-sub-title">Using Dot Notation</li>
+                    <p>
+                        There are two ways to access the properties of an
+                        object: dot notation (.) and bracket notation ([]),
+                        similar to an array. Dot notation is what you use when
+                        you know the name of the property you're trying to
+                        access ahead of time.
+                    </p>
+                    <pre><code>object.property;</code></pre>
+                    Here is a sample of using dot notation (
+                    <span class="highlight">.</span>
+                    ) to read the
+                    <span class="highlight">name</span>
+                    property of the
+                    <span class="highlight">developer</span>
+                    object:
+                    <pre>
+<code>const developer = {
+    name: "Jessica",
+}
+console.log(developer.name); //Jessica</code></pre>
+                </ul>
+                <ul>
+                    <li class="sub-sub-title">Using Bracket Notation</li>
+                    <p>
+                        The second way to access the properties of an object is
+                        bracket notation (<span class="highlight">[]</span>). If
+                        the property of the object you are trying to access has
+                        a space in its name, you will need to use bracket
+                        notation.
+                    </p>
+                    <pre><code>objectName["property name"];</code></pre>
+                    <p>
+                        Here is a sample of using bracket notation to read an
+                        object's property:
+                    </p>
+                    <pre><code>const spaceObj = {
+    "Space Name": "Kirk",
+};
+
+spaceObj["Space Name"]; // "Kirk"</code></pre>
+                </ul>
+                <li class="sub-title">
+                    Adding an <span class="highlight">object</span> to an
+                    <span class="highlight">array</span>
+                </li>
+                <pre><code>const locations = [
+    { 
+        name: "town square"
+    }
+];</code></pre>
+            </ul>
+            <h3>RegEx</h3>
+            <ul>
+                Look at the RegEx Snippets Page for more info on patterns.
+
+                <li class="title">Finding a pattern match</li>
+                <ul>
+                    <li class="sub-title">
+                        Matching "potato", and counting it.
+                    </li>
+                    <pre>
+<code>function potatoes(str) {
+    let re = str.match(/potato/g);
+    console.log(re.length);
+}
+potatoes("potato");
+potatoes("potatopotato");
+potatoes("potatoapple");</code></pre>
+                    <pre><code class="output">1
+2
+1</code></pre>
+                </ul>
+                <li class="title">Iterating through a match</li>
+                <pre>
+<code>function findWord(str) {
+    let re = /abc/g;
+    let resultMatch = str.match(re);
+    
+    console.log(resultMatch);
+   
+    if (resultMatch.length > 1) {
+        for (let i = 0; i &gt; resultMatch.length; i++) {
+            console.log([i] + " index result :    " + resultMatch[i]);
+        }
+    }
+}
+
+findWord("lkjolkabckjabcdkl");</code></pre>
+                <pre>
+<code class="output">0 index result :   abc
+1 index result :   abc</code></pre>
+                <li class="title">
+                    Finding the starting index of a match, only looks at the
+                    first index
+                </li>
+                <pre>
+<code>function findWord(str) {
+    let re = /abc/g;
+    let resultSearch = str.search(re);
+    
+    console.log(resultSearch);
+}
+
+findWord("lkjolkabckjabcdkl");</code></pre>
+                <pre><code class="output">6</code></pre>
+                <li class="title">Find a match, then replace it</li>
+                <ul>
+                    <li class="sub-title">Using Split & join</li>
+                    <pre>
+<code>function findWord(str) {
+    let re = /abc/g;
+    let resultSplit = str.split(re).join("**");
+
+    console.log(resultSplit);
+}
+
+findWord("lkjolkabckjabcdkl");</code></pre>
+                    <pre><code class="output">lkjolk**kj**dkl</code></pre>
+                    <li class="sub-title">Using Replace</li>
+                    <pre>
+<code>function findWord(str) {
+    let re = /abc/g;
+    let resultReplace = str.replace(re, "+++");
+    
+    console.log(resultReplace);
+}
+
+findWord("lkjolkabckjabcdkl");</code></pre>
+                    <pre><code class="output">lkjolk+++kj+++dkl</code></pre>
+                </ul>
+            </ul>
+            <h3>
+                Selecting from an array of tags, then adding a class to each of
+                them.
+            </h3>
+            <div>
+                <span class="situ-solu">Situ :</span>
+                <p>
+                    I need to add a class to each H1 & H3 element of the html
+                    page, to turn them green. However, there are no classes
+                    attached to these tags.
+                </p>
+                <br />
+                <br />
+                <span class="situ-solu">Solu : </span>
+                <ol>
+                    <li>
+                        I need to make an array of the tags I am looking for.
+                    </li>
+                    <pre>
+<code>var Hs = ["h1", "h3"];</code></pre>
+                    <li>
+                        I need to iterate through each of these tags, that are
+                        now part of an array(Node List)
+                    </li>
+                    <pre>
+<code>for (let i = 0; i &lt; Hs.length; i++) {
+    var hs = Hs[i];
+};</code></pre>
+                    <li>
+                        I need to find all the tags that match the items in my
+                        array.
+                    </li>
+                    <pre>
+<code>var h = document.querySelectorAll(hs);</code></pre>
+                    <li>
+                        I need to make a function that will toggle on the
+                        classes I want to show up on the tags.
+                    </li>
+                    <pre>
+<code>function colorRed(element) {
+    element.classList.toggle("oswald-font");
+    element.classList.toggle("green");
+}</code></pre>
+                    <li>I need to toggle a class on to each of the tags.</li>
+                    <pre>
+<code>h.forEach(colorRed);</code></pre>
+                </ol>
+                <ul>
+                    <pre>
+<code>var Hs = ["h1", "h3"];
+for (let i = 0; i &lt; Hs.length; i++) {
+    var hs = Hs[i];
+    var h = document.querySelectorAll(hs);
+
+    function colorRed(element) {
+element.classList.toggle("oswald-font");
+element.classList.toggle("green");
+    }
+    h.forEach(colorRed);
+}</code></pre>
+                </ul>
+            </div>
+            <h3>Generating a random number</h3>
+            <ul>
+                <li class="title">Generating a random between x & y</li>
+                <pre><code>let result = Math.floor(Math.random() * y) + x;</code></pre>
+                <li class="title">Generating a random number between 1 & 5</li>
+                <pre><code>let  result = Math.floor(Math.random() * 5) + 1;</code></pre>
+            </ul>
+            <h3>Accessing an html element (using the elements ID)</h3>
+            <pre><code>let button1 = document.querySelector("#button1);</code></pre>
+            <h3>Getting an HTML element to display something, as a text</h3>
+            <pre><code>let button1 = document.querySelector("#button1);
+button1.innerText = "Press this button here";</code></pre>
+            <h3>
+                Getting a clickable HTML element to do something when clicked
+            </h3>
+            <pre><code>let button1 = document.querySelector("#button1");
+button1.addEventListener("click", printHello);
+function printHello() {
+    button1.innerText = "Button was clicked";
+}</code></pre>
+            <h3>.innerHTML vs innerText</h3>
+            <ol>
+                <li>
+                    InnerText = Only the text in the element and its child
+                    elements
+                </li>
+                <li>
+                    Inner HTML = The text & HTML tags of all the child
+                    elelements.
+                </li>
+            </ol>
+            <ul>
+                <li class="sub-title">The HTML</li>
+                <pre><code>&lt;div&gt;
+&lt;ul id="unordered_list"&gt;
+    This is an unordered list
+    &lt;li&gt;
+        Item 1
+        &lt;ul class="container"&gt;
+            &lt;li&gt;x&lt;/li&gt;
+            &lt;li&gt;y&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+
+    &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;li&gt;Item 4&lt;/li&gt;
+    &lt;li&gt;Item 5&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+                <img src="images/Screenshot 2024-04-19 152749.png" alt="" />
+                <li class="sub-title">The JS</li>
+                <pre><code>let unorderedList = document.querySelector("#unordered_list");
+console.log(unorderedList.innerText);
+console.log(unorderedList.innerHTML);</code></pre>
+                <li class="sub-title">The console</li>
+                <img src="images/Screenshot 2024-04-19 153011.png" alt="" />
+            </ul>
+        </div>
+        <!-- Through GitHub -->
+        <!-- <script src="https://nzscode.github.io/Snippets-Javascript/snippets-javascript.js"></script>
+        <script src="https://nzscode.github.io/Snippets/prism.js"></script> -->
+        <!-- For Live Server-->
+        <script src="snippets-javascript.js"></script>
+        <script src="prism.js"></script>
+    </body>
+</html>
